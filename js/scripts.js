@@ -965,27 +965,23 @@
 
   /* Contact Form
   -------------------------------------------------------*/
+
   var submitContact = $('#submit-message'),
     message = $('#msg');
 
   submitContact.on('click', function(e){
     e.preventDefault();
-    // var $this = $(this);
-    // var formData = new FormData($("#contact-form")[0]);
-    var formData = { body :{
-      name: $("#name").val(),
-      mail: $("#mail").val(),
-      comment: $("#comment").val()}
-    };
-    console.log(formData);
 
+    var $this = $(this);
+    
     $.ajax({
       type: "POST",
-      url: 'https://c4lbwlu0z8.execute-api.eu-west-1.amazonaws.com/dev/send-contact-email',
-      contentType: 'application/json',
-      data: formData,
+      url: 'contact.php',
+      dataType: 'json',
+      cache: false,
+      data: $('#contact-form').serialize(),
       success: function(data) {
-        console.log(`Data : ${data}`);
+
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
           message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
