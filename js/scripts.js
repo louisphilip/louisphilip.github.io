@@ -1041,11 +1041,7 @@
         age--;
       }
       resultDiv.text('Age: ' + age);
-    }
-
-    // Trigger calculation on page load
-    calculateAge();
-  
+    }  
 
 })(jQuery);
 
