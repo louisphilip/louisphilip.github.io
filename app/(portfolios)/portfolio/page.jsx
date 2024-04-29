@@ -1,25 +1,26 @@
-import Header from "@/components/homes/headers/Header";
-import MenuTwo from "@/components/homes/menus/MenuTwo";
-import PersonalInfo from "@/components/homes/personalInfo/PersonalInfo";
-
-import Portfolio from "@/components/homes/portfolio/Portfolio";
+import HeaderFour from "@/components/homes/headers/HeaderFour";
+import HeaderThree from "@/components/homes/headers/HeaderThree";
+import PersonalInfoThree from "@/components/homes/personalInfo/PersonalInfoThree";
+import PortfolioThree from "@/components/homes/portfolio/PortfolioThree";
 
 import React from "react";
 export const metadata = {
-  title: "Portfolio-1 || Bostami - Professional portfolio NextJS Template",
+  title: "Portfolio-3 || Bostami - Professional portfolio NextJS Template",
   description:
     "Discover Botami,the most impressive portfolio template for work showcase, blog",
 };
 export default function page() {
   return (
     <>
-      <div className="page-wrapper home-1" id={"portfolio"}>
-        <Header />
+      <div className="page-wrapper home-3">
+        <HeaderFour />
         <div className="container z-index-3">
           <div className="row">
-            <PersonalInfo />
-            <Portfolio />
-            <MenuTwo />
+            <PersonalInfoThree />
+            <div className="col-xxl-8 col-xl-8 col-lg-8">
+              <HeaderThree />
+              <PortfolioThree />
+            </div>
           </div>
         </div>
       </div>

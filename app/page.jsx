@@ -10,7 +10,7 @@ export const metadata = {
     "Discover more about me...",
 };
 
-export default function Home3() {
+export default function Home() {
   return (
     <>
       <div className="page-wrapper home-3">
