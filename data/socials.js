@@ -1,26 +1,32 @@
 export const socialMediaData = [
   {
     id: 1,
-    className: "fa-brands fa-facebook-f",
-    href: "#",
-    color: "#1773EA",
-  },
-  {
-    id: 2,
     className: "fa-brands fa-twitter",
-    href: "#",
+    href: "https://twitter.com/louisphilip_s",
     color: "#1C9CEA",
   },
   {
-    id: 3,
+    id: 2,
     className: "fa-brands fa-instagram",
-    href: "#",
+    href: "https://www.instagram.com/louisphilip_s/",
     color: "#e12a72",
   },
   {
-    id: 4,
+    id: 3,
     className: "fa-brands fa-linkedin-in",
-    href: "#",
+    href: "https://www.linkedin.com/in/louisphilip/",
+    color: "#144679",
+  },
+  {
+    id: 4,
+    className: "fa-brands fa-medium",
+    href: "https://medium.com/@louisphilip_s",
+    color: "#144679",
+  },
+  {
+    id: 5,
+    className: "fa-brands fa-github",
+    href: "https://medium.com/@louisphilip_s",
     color: "#144679",
   },
 ];

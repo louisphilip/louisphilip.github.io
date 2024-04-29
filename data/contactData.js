@@ -6,7 +6,7 @@ export const contactData = [
     iconClass: "fa-regular fa-mobile",
     text: {
       label: "Phone",
-      value: "+123 456 7890",
+      value: "+27 72 998 5673",
     },
   },
   {
@@ -16,7 +16,7 @@ export const contactData = [
     iconClass: "fa-regular fa-envelope-open-text",
     text: {
       label: "Email",
-      value: "example@mail.com",
+      value: "me@louisphilipshahim.com",
     },
   },
   {
@@ -26,7 +26,7 @@ export const contactData = [
     iconClass: "fa-solid fa-location-dot",
     text: {
       label: "Location",
-      value: "Hong kong china",
+      value: "Johannesburg, South Africa",
     },
   },
   {
@@ -36,7 +36,7 @@ export const contactData = [
     iconClass: "fa-light fa-calendar-days",
     text: {
       label: "Birthday",
-      value: "May 27, 1990",
+      value: "Nov 6, 1993",
     },
   },
 ];

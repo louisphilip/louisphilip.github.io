@@ -66,7 +66,7 @@ export default function HeaderTwo() {
                   <Image
                     width={153}
                     height={32}
-                    src="/assets/img/logo/logo-2.png"
+                    src="/assets/img/logo/logo.png"
                     alt="logo"
                   />
                 </Link>
