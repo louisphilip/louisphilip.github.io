@@ -111,7 +111,7 @@ export default function AboutOne() {
 
         <div className="footer-copyright text-center pt-25 pb-25">
           <span>
-            © {new Date().getFullYear()} All Rights Reserved by elite-themes24.
+            © {new Date().getFullYear()} All Rights Reserved by LP Shahim.
           </span>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function ContactThree() {
 
       <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
         <span>
-          © {new Date().getFullYear()} All Rights Reserved by elite-themes24.
+          © {new Date().getFullYear()} All Rights Reserved by LP Shahim.
         </span>
       </div>
     </div>
