@@ -3,33 +3,20 @@ export const portfolioData = [
     id: 1,
     class: "isotop-item logo",
     bgClass: "bg-prink",
-    imgSrc: "/assets/img/work/work-img-1.png",
-    subtitle: "Travel Landing , UX/UI",
-    title: "Chul urina",
+    imgSrc: "/assets/img/me.jpg",
+    subtitle: "Promoting Personal Brand",
+    title: "Personal Website Deployment",
     target: "#portfolio-1",
-    category: ["Logo"],
+    category: ["CI/CD"],
     project: "website",
-    languages: ["Photoshop", "Figma"],
-    client: "Envato",
+    languages: ["Terraform", "gcloud"],
+    client: "Personal",
     previewLink: "#",
-    previewName: "www.envato.com",
+    previewName: "louisphilipshahim.com",
     desc: [
-      `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-      consequatur delectus porro sapiente molestias, magni quasi sed, enim
-      corporis omnis doloremque soluta inventore dolorum conseqr quo
-      obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur
-      adipisicing elit. Fuga consequatur delectus porro sapiente molestias,
-      magni quasi sed, enim corporis omnis doloremque soluta inventore
-      dolorum consequuntur quo obcaecati rerum sit non.`,
+      `One of the best things that I have done was to get my brand out there while doing what I love!🤩`,
 
-      ` Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-      consequatur delectus porro sapiente molestias, magni quasi sed, enim
-      corporis omnis doloremque soluta inventore dolorum consetur quo
-      obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur
-      adipisicing elit. Fuga consequatur delectus porro sapiente molestias,
-      magni quasi sed, sit amet consectetur adipisicing elit. Fuga
-      consequatur delectus porro sapiente molestias, magni quasi sed, enim
-      corporis omnis doloremque soluta inventore dolorum consequuntur.`,
+      `This project involved setting up a CI/CD pipeline to deploy updates to my website whenever changes were pushed to the repository.🚀`,
     ],
   },
   {
@@ -207,14 +194,14 @@ export const filterButtons = [
   },
   {
     id: 2,
-    text: "Mockup",
+    text: "Cloud",
   },
   {
     id: 3,
-    text: "Graphic Design",
+    text: "CI/CD",
   },
   {
     id: 4,
-    text: "Logo",
+    text: "Mobile",
   },
 ];
