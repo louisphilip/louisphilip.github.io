@@ -56,7 +56,7 @@ export default function AboutThree() {
 
       <div className="section-wrapper bg-light-white-2 pt-45 pb-60 pl-60 pr-60">
         <div className="bostami-section-title-wrap text-center mb-50">
-          <h3 className="section-title">clinet</h3>
+          <h3 className="section-title">client</h3>
         </div>
 
         <div className="bostami-client-slider">

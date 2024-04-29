@@ -11,19 +11,19 @@ export default function HeaderFour() {
   const addDarkbg = () => {
     if (
       document.body.style.backgroundImage !=
-      "url(/assets/img/bg/page-bg-dark-1.jpg"
+      "url(/assets/img/bg/lp-bg-dark-1.png"
     ) {
       document.body.style.backgroundImage =
-        "url(/assets/img/bg/page-bg-dark-1.jpg";
+        "url(/assets/img/bg/lp-bg-dark-1.png";
       setDarkMode(true);
     }
   };
 
   const addlightBg = () => {
     if (
-      document.body.style.backgroundImage != "url(/assets/img/bg/page-bg-1.jpg)"
+      document.body.style.backgroundImage != "url(/assets/img/bg/lp-bg-1.png)"
     ) {
-      document.body.style.backgroundImage = "url(/assets/img/bg/page-bg-1.jpg)";
+      document.body.style.backgroundImage = "url(/assets/img/bg/lp-bg-1.png)";
       setDarkMode(false);
     }
   };
@@ -61,8 +61,8 @@ export default function HeaderFour() {
               <div className="bostami-header-logo">
                 <Link className="site-logo" href="/">
                   <Image
-                    width={153}
-                    height={32}
+                    width={150}
+                    height={150}
                     src="/assets/img/logo/logo.png"
                     alt="logo"
                   />

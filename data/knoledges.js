@@ -1,9 +1,9 @@
 export const knoledges = [
-  "Digital Design",
-  "Marketing",
   "Communication",
-  "Social Media",
+  "Leadership",
+  "Cloud Architecture",
+  "Sales",
+  "Marketing",
   "Time Management",
-  "Flexibility",
-  "Print",
+  "Agile",
 ];

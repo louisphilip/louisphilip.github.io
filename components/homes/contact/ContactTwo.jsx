@@ -55,7 +55,7 @@ export default function ContactTwo() {
               <div className="col-xl-8  col-lg-12">
                 <div className="contact-area bg-light-white-2 mb-60">
                   <h5 className="contact-title">
-                    I'm always open to discussing produuct
+                    I'm always open to discussing product
                   </h5>
                   <h5 className="contact-title-b">design work or partnerships.</h5>
                   <ContactForm/>

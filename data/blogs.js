@@ -1,7 +1,7 @@
 export const blogData = [
   {
     id: 1,
-    imgSrc: "/assets/img/blog/blog-img-1.png",
+    imgSrc: "/assets/img/me.jpg",
     bgClass: "bg-prink",
     date: "27 April",
     category: "Inspiration",
