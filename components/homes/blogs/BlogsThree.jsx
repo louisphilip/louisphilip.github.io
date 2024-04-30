@@ -122,7 +122,7 @@ export default function BlogsThree({ posts }) {
                                 <a href={item.link} target={"_blank"} className="cursor-pointer">{item.title}</a>
                               </h6>
                                 <span className="blog-cetagory">
-                                    <i><b>{...item.categories}</b></i>
+                                    <i><b>{item.categories.join(", ")}</b></i>
                                 </span>
                             </div>
                     //       </div>
