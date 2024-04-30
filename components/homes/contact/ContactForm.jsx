@@ -17,23 +17,7 @@ export default function ContactForm() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.init({
-      publicKey: 'PbyZxPpo8FAlXaFUZ',
-      // Do not allow headless browsers
-      blockHeadless: true,
-      blockList: {
-        // Block the suspended emails
-        list: ['foo@emailjs.com', 'bar@emailjs.com'],
-        // The variable contains the email address
-        watchVariable: 'userEmail',
-      },
-      limitRate: {
-        // Set the limit rate for the application
-        id: 'app',
-        // Allow 1 request per 10s
-        throttle: 10000,
-      },
-    });
+    emailjs.init({publicKey: 'PbyZxPpo8FAlXaFUZ',});
     emailjs
       .sendForm(
         "service_d513gdm",
@@ -55,7 +39,8 @@ export default function ContactForm() {
           document.getElementById("myFormOne").reset();
         },
         (error) => {
-          toast.error("Ops Message not Sent!", {
+          console.log(error);
+          toast.error("Oops Message not Sent!", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
