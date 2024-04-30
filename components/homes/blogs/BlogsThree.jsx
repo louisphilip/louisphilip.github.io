@@ -33,7 +33,6 @@ export default function BlogsThree({ posts }) {
         setError(true);
       }
     }
-
     fetchData();
     setShowSlider(true);
   }, []);
@@ -101,32 +100,35 @@ export default function BlogsThree({ posts }) {
                   loop={true}
                 >
                   {items.map((item, index) => (
-                    <div className="col-lg-6 col-md-6">
-                      <div
-                        className={`blog-slider-single bg-prink `}
-                      >
-                        <a className="img cursor-pointer">
-                          <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
-                        </a>
-                        <div className="blog-meta">
-                          <span className="blog-date">{new Date(item.pubDate).toDateString()}</span>
-                          <span className="blog-cetagory">
-                            <a href={item.link} target={"_blank"}>
-                              <b>{item.title}</b>
-                            </a>
-                          </span>
-                        </div>
-                        <h6
-                          className="blog-title"
-                          onClick={() => {
-                            setModalContent(item);
-                            setShowModal(true);
-                          }}
-                        >
-                          <a className="cursor-pointer"></a>
-                        </h6>
-                      </div>
-                    </div>
+                    // <SwiperSlide key={index}>
+                    //   <div className="swiper-slide">
+                        // <div className="row">
+                          // <div className="col-lg-6 col-md-6">
+                            <div
+                              className={`blog-slider-single bg-prink `}
+                            >
+                              <a className="img cursor-pointer">
+                                <img style={{
+                                  width: "100%",
+                                  height: "fit-content",
+                                }} width={430} height={430} src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
+                              </a>
+                              <div className="blog-meta">
+                                <span className="blog-date">{new Date(item.pubDate).toDateString()}</span>
+                              </div>
+                              <h6
+                                className="blog-title"
+                              >
+                                <a href={item.link} target={"_blank"} className="cursor-pointer">{item.title}</a>
+                              </h6>
+                                <span className="blog-cetagory">
+                                    <i><b>{...item.categories}</b></i>
+                                </span>
+                            </div>
+                    //       </div>
+                    //     </div>
+                    //   </div>
+                    // </SwiperSlide>
                   ))}
                 </Swiper>
               )}
