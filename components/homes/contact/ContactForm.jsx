@@ -19,8 +19,8 @@ export default function ContactForm() {
     e.preventDefault();
     emailjs
       .sendForm(
-        service,
-        template,
+        "service_0mk0xhv",
+        "template_28mxz0h",
         form.current,
         "PbyZxPpo8FAlXaFUZ"
       )
