@@ -36,8 +36,8 @@ export default function ContactForm() {
     });
     emailjs
       .sendForm(
-        service,
-        template,
+        "service_d513gdm",
+        "template_28mxz0h",
         form.current,
       )
       .then(
