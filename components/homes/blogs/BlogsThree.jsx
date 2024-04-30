@@ -16,7 +16,7 @@ const chunkArray = (arr, chunkSize) => {
 };
 
 export default function BlogsThree({ posts }) {
-  // const [outputArray, setfirst] = useState(chunkArray(blogData, 4));
+  const [outputArray, setfirst] = useState(chunkArray(blogData, 4));
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
   const [modalContent, setModalContent] = useState();
@@ -74,8 +74,10 @@ export default function BlogsThree({ posts }) {
                     <div key={index}>
                       <a href={item.link} target={"_blank"}>
                         <h3>{item.title}</h3>
-
+                        <p>new Date({item.pubDate}).getFullYear()</p>
                       </a>
+                      <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
+
                     </div>
                   ))}
                 </ul>
@@ -88,7 +90,7 @@ export default function BlogsThree({ posts }) {
                 </a>
               </div>
             </section>
-            {/*<div className="swiper-container blog-slider-active">
+            {/* <div className="swiper-container blog-slider-active">
               {showSlider && (
                 <Swiper
                   // {...setting}
@@ -123,14 +125,14 @@ export default function BlogsThree({ posts }) {
                                       width: "100%",
                                       height: "fit-content",
                                     }}
-                                    src={elm2.thumnail}
+                                    src={elm2.imgSrc}
                                     alt="blog"
                                   />
                                 </a>
                                 <div className="blog-meta">
-                                  <span className="blog-date">{elm2.pubDate}</span>
+                                  <span className="blog-date">{elm2.date}</span>
                                   <span className="blog-cetagory">
-                                    {elm2.tags}
+                                    {elm2.category}
                                   </span>
                                 </div>
                                 <h6
