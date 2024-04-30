@@ -14,8 +14,8 @@ export default function ContactThree() {
 
       <div className="section-wrapper pr-60 pl-60 mb-60">
         <div className="contact-area bg-light-white-2">
-          <h5 className="contact-title">I'm always open to discussing product</h5>
-          <h5 className="contact-title-b">design work or partnerships.</h5>
+          <h5 className="contact-title">I'm always open to discussing opportunities for</h5>
+          <h5 className="contact-title-b">work or partnerships.</h5>
           <ContactForm/>
         </div>
       </div>
