@@ -67,29 +67,25 @@ export default function BlogsThree({ posts }) {
 
         <div className="section-wrapper pr-60 pl-60 mb-60">
           <div className="blog-slider-wrap">
-            <section>
-              <div>
-                <ul>
-                  {items.map((item, index) => (
-                    <div key={index}>
-                      <a href={item.link} target={"_blank"}>
-                        <h3>{item.title}</h3>
-                        <p>{item.pubDate}</p>
-                      </a>
-                      <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
+            <ul>
+              {items.map((item, index) => (
+                <div key={index}>
+                  <a href={item.link} target={"_blank"}>
+                    <h3>{item.title}</h3>
+                    <p>{new Date(item.pubDate).toDateString()}</p>
+                  </a>
+                  <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
 
-                    </div>
-                  ))}
-                </ul>
-                <a
-                  href={"https://medium.com/@louisphilip_s"}
-                  target={"_blank"}
-                  rel={"noopener noreferrer"}
-                >
-                  Read More on Medium
-                </a>
-              </div>
-            </section>
+                </div>
+              ))}
+            </ul>
+            <b><a
+              href={"https://medium.com/@louisphilip_s"}
+              target={"_blank"}
+              rel={"noopener noreferrer"}
+            >
+              Read More on Medium
+            </a></b>
             {/* <div className="swiper-container blog-slider-active">
               {showSlider && (
                 <Swiper
