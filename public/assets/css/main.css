@@ -3658,11 +3658,11 @@ textarea:focus::placeholder {
   text-transform: capitalize;
   margin-right: 5px;
 }
-.blog-slider-single .blog-meta .blog-cetagory {
+.blog-slider-single .blog-meta .blog-category {
   position: relative;
   padding-left: 12px;
 }
-.blog-slider-single .blog-meta .blog-cetagory::after {
+.blog-slider-single .blog-meta .blog-category::after {
   content: "";
   position: absolute;
   width: 4px;
@@ -3845,7 +3845,7 @@ textarea:focus::placeholder {
   .modal-content
   .modal-body
   .blog-meta
-  .blog-cetagory {
+  .blog-category {
   font-size: 18px;
   margin-right: 15px;
 }

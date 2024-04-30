@@ -15,26 +15,80 @@ const chunkArray = (arr, chunkSize) => {
   return result;
 };
 
-export default function BlogsThree() {
-  const [outputArray, setfirst] = useState(chunkArray(blogData, 4));
+export default function BlogsThree({ posts }) {
+  // const [outputArray, setfirst] = useState(chunkArray(blogData, 4));
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState(null);
   const [modalContent, setModalContent] = useState();
   const [showModal, setShowModal] = useState(false);
   const [showSlider, setShowSlider] = useState(false);
   useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@louisphilip_s');
+        const data = await res.json();
+        const items = data.items;
+        setItems(items);
+      } catch {
+        setError(true);
+      }
+    }
+
+    fetchData();
     setShowSlider(true);
   }, []);
+
+  if (error) {
+    return (
+      <section>
+        <div>
+          <ul>
+            <p>Failed to fetch data, please try again later.</p>
+          </ul>
+          <a
+            href={"https://medium.com/@louisphilip_s"}
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+          >
+            Read on Medium
+          </a>
+        </div>
+      </section>
+    );
+  }
   return (
     <>
       <div className="bostami-page-content-wrap">
         <div className="section-wrapper pl-60 pr-60 pt-60">
           <div className="bostami-page-title-wrap mb-15">
-            <h2 className="page-title">blogs</h2>
+            <h2 className="page-title">LP's blogs</h2>
           </div>
         </div>
 
         <div className="section-wrapper pr-60 pl-60 mb-60">
           <div className="blog-slider-wrap">
-            <div className="swiper-container blog-slider-active">
+            <section>
+              <div>
+                <ul>
+                  {items.map((item, index) => (
+                    <div key={index}>
+                      <a href={item.link} target={"_blank"}>
+                        <h3>{item.title}</h3>
+
+                      </a>
+                    </div>
+                  ))}
+                </ul>
+                <a
+                  href={"https://medium.com/@louisphilip_s"}
+                  target={"_blank"}
+                  rel={"noopener noreferrer"}
+                >
+                  Read More on Medium
+                </a>
+              </div>
+            </section>
+            {/*<div className="swiper-container blog-slider-active">
               {showSlider && (
                 <Swiper
                   // {...setting}
@@ -55,7 +109,7 @@ export default function BlogsThree() {
                           {elm.map((elm2, i2) => (
                             <div key={i2} className="col-lg-6 col-md-6">
                               <div
-                                className={`blog-slider-single  ${elm2.bgClass} `}
+                                className={`blog-slider-single bg-prink `}
                               >
                                 <a className="img cursor-pointer">
                                   <Image
@@ -69,14 +123,14 @@ export default function BlogsThree() {
                                       width: "100%",
                                       height: "fit-content",
                                     }}
-                                    src={elm2.imgSrc}
+                                    src={elm2.thumnail}
                                     alt="blog"
                                   />
                                 </a>
                                 <div className="blog-meta">
-                                  <span className="blog-date">{elm2.date}</span>
+                                  <span className="blog-date">{elm2.pubDate}</span>
                                   <span className="blog-cetagory">
-                                    {elm2.category}
+                                    {elm2.tags}
                                   </span>
                                 </div>
                                 <h6
@@ -98,7 +152,7 @@ export default function BlogsThree() {
                 </Swiper>
               )}
               <div className="blog-progation blog-progation-three"></div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -116,3 +170,5 @@ export default function BlogsThree() {
     </>
   );
 }
+
+// export default BlogsThree;
