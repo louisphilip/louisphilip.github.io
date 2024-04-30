@@ -67,7 +67,7 @@ export default function BlogsThree({ posts }) {
 
         <div className="section-wrapper pr-60 pl-60 mb-60">
           <div className="blog-slider-wrap">
-            <ul>
+            {/* <ul>
               {items.map((item, index) => (
                 <div key={index}>
                   <a href={item.link} target={"_blank"}>
@@ -78,15 +78,15 @@ export default function BlogsThree({ posts }) {
 
                 </div>
               ))}
-            </ul>
-            <b><a
+            </ul> */}
+            {/* <b><a
               href={"https://medium.com/@louisphilip_s"}
               target={"_blank"}
               rel={"noopener noreferrer"}
             >
               Read More on Medium
-            </a></b>
-            {/* <div className="swiper-container blog-slider-active">
+            </a></b> */}
+            <div className="swiper-container blog-slider-active">
               {showSlider && (
                 <Swiper
                   // {...setting}
@@ -100,57 +100,38 @@ export default function BlogsThree({ posts }) {
                   slidesPerView={1}
                   loop={true}
                 >
-                  {outputArray.map((elm, i) => (
-                    <SwiperSlide key={i}>
-                      <div className="swiper-slide">
-                        <div className="row">
-                          {elm.map((elm2, i2) => (
-                            <div key={i2} className="col-lg-6 col-md-6">
-                              <div
-                                className={`blog-slider-single bg-prink `}
-                              >
-                                <a className="img cursor-pointer">
-                                  <Image
-                                    width={430}
-                                    height={430}
-                                    onClick={() => {
-                                      setModalContent(elm2);
-                                      setShowModal(true);
-                                    }}
-                                    style={{
-                                      width: "100%",
-                                      height: "fit-content",
-                                    }}
-                                    src={elm2.imgSrc}
-                                    alt="blog"
-                                  />
-                                </a>
-                                <div className="blog-meta">
-                                  <span className="blog-date">{elm2.date}</span>
-                                  <span className="blog-cetagory">
-                                    {elm2.category}
-                                  </span>
-                                </div>
-                                <h6
-                                  className="blog-title"
-                                  onClick={() => {
-                                    setModalContent(elm2);
-                                    setShowModal(true);
-                                  }}
-                                >
-                                  <a className="cursor-pointer">{elm2.title}</a>
-                                </h6>
-                              </div>
-                            </div>
-                          ))}
+                  {items.map((item, index) => (
+                    <div className="col-lg-6 col-md-6">
+                      <div
+                        className={`blog-slider-single bg-prink `}
+                      >
+                        <a className="img cursor-pointer">
+                          <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
+                        </a>
+                        <div className="blog-meta">
+                          <span className="blog-date">{new Date(item.pubDate).toDateString()}</span>
+                          <span className="blog-cetagory">
+                            <a href={item.link} target={"_blank"}>
+                              <b>{item.title}</b>
+                            </a>
+                          </span>
                         </div>
+                        <h6
+                          className="blog-title"
+                          onClick={() => {
+                            setModalContent(item);
+                            setShowModal(true);
+                          }}
+                        >
+                          <a className="cursor-pointer"></a>
+                        </h6>
                       </div>
-                    </SwiperSlide>
+                    </div>
                   ))}
                 </Swiper>
               )}
               <div className="blog-progation blog-progation-three"></div>
-            </div> */}
+            </div>
           </div>
         </div>
 
