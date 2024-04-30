@@ -17,12 +17,12 @@ export default function ContactForm() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.init({publicKey: 'PbyZxPpo8FAlXaFUZ',});
     emailjs
       .sendForm(
-        "service_d513gdm",
-        "template_28mxz0h",
+        service,
+        template,
         form.current,
+        "PbyZxPpo8FAlXaFUZ"
       )
       .then(
         (result) => {
@@ -39,7 +39,6 @@ export default function ContactForm() {
           document.getElementById("myFormOne").reset();
         },
         (error) => {
-          console.log(error);
           toast.error("Oops Message not Sent!", {
             position: "top-right",
             autoClose: 5000,
