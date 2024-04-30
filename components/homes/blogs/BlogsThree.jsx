@@ -74,7 +74,7 @@ export default function BlogsThree({ posts }) {
                     <div key={index}>
                       <a href={item.link} target={"_blank"}>
                         <h3>{item.title}</h3>
-                        <p>new Date({item.pubDate}).getFullYear()</p>
+                        <p>{item.pubDate}</p>
                       </a>
                       <img src={(item['description']).toString().match(/<img[^>]+src="([^">]+)"/)[1]} alt={item.title}></img>
 
