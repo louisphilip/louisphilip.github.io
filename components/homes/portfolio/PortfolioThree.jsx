@@ -10,11 +10,13 @@ import Image from "next/image";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
-export default function PortfolioThree({ starredItems }) {
+export default function PortfolioThree() {
   const [filteredItem, setFilteredItem] = useState([]);
   const [activeTab, setActiveTab] = useState("All");
   const [modalContent, setModalContent] = useState();
   const [showModal, setShowModal] = useState(false);
+  const [starredItems, setItems] = useState([]);
+  const [error, setError] = useState(null);
   useEffect(() => {
     async function getGithubStars() {
       const httpLink = createHttpLink({
@@ -24,19 +26,19 @@ export default function PortfolioThree({ starredItems }) {
         return {
           headers: {
             ...headers,
-            authorization: `Bearer ${process.env.GH_ACCESS_TOKEN}`,
+            authorization: `Bearer ${process.env.NEXT_PUBLIC_GH_ACCESS_TOKEN}`,
           }
         }
       });
-    
+
       const client = new ApolloClient({
         link: authLink.concat(httpLink),
         cache: new InMemoryCache()
       });
-    
-    
-      const { data } = await client.query({
-        query: gql`
+
+      try {
+        const { data } = await client.query({
+          query: gql`
           {
             user(login: "louisphilip") {
               starredRepositories {
@@ -56,20 +58,19 @@ export default function PortfolioThree({ starredItems }) {
             }
           }
           `
-      });
-    
-      const { user } = data;
-      const starredItems = user.starredRepositories.edges.map(edge => edge.node);
-      console.log(starredItems);
-    
-      return {
-        props: {
-          starredItems
-        }
+        });
+
+        const { user } = data;
+        const starredItems = user.starredRepositories.edges.map(edge => edge.node);
+        console.log(starredItems);
+        setItems(starredItems);
+      } catch (error) {
+        setError(error);
       }
-    
+
     }
     getGithubStars();
+
     if (activeTab == "All") {
       setFilteredItem(portfolioData);
     } else {
@@ -92,7 +93,16 @@ export default function PortfolioThree({ starredItems }) {
           <div className="row">
             <div className="col-12">
               <ul className="fillter-btn-wrap buttonGroup isotop-menu-wrapper mb-30">
-
+                {filterButtons.map((elm, i) => (
+                  <li
+                    onClick={() => setActiveTab(elm.text)}
+                    key={i}
+                    className={`fillter-btn ${activeTab == elm.text ? "is-checked" : ""
+                      } `}
+                  >
+                    {elm.text}
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -101,7 +111,7 @@ export default function PortfolioThree({ starredItems }) {
                   {starredItems.map(item => (
                     <li key={item.name}>
                       <a href={item.url}>{item.name}</a>
-                      {item.description && <p>{item.description}</p>}
+                      ⭐️{item.stargazers.totalCount}
                     </li>
                   ))}
                 </ul>
