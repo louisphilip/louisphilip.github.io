@@ -24,7 +24,7 @@ export default function PortfolioThree({ starredItems }) {
       );
       setFilteredItem(filtered);
     }
-  }, [activeTab]);
+  }, [activeTab, starredItems]);
   return (
     <>
       <div className="bostami-page-content-wrap">
@@ -51,8 +51,22 @@ export default function PortfolioThree({ starredItems }) {
                 ))}
               </ul>
             </div>
+            <div>
+              {starredItems ? (
+                <ul>
+                  {starredItems.map(item => (
+                    <li key={item.name}>
+                      <a href={item.url}>{item.name}</a>
+                      {item.description && <p>{item.description}</p>}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Loading starred repositories...</p>
+              )}
+            </div>
 
-            <div className="col-12">
+            {/* <div className="col-12">
               <div id="fillter-item-active" className="fillter-item-wrap ">
                 <AnimatePresence>
                   <ResponsiveMasonry
@@ -114,7 +128,7 @@ export default function PortfolioThree({ starredItems }) {
                   </ResponsiveMasonry>
                 </AnimatePresence>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -152,35 +166,46 @@ export async function getStaticProps() {
     cache: new InMemoryCache()
   });
 
-  const { data } = await client.query({
-    query: gql`
-    {
-      user(login: "louisphilip") {
-        starredRepositories {
-          edges {
-            node {
-              ... on Repository {
-                name
-                id
-                url
-                stargazers {
-                  totalCount
+  try {
+
+    const { data } = await client.query({
+      query: gql`
+      {
+        user(login: "louisphilip") {
+          starredRepositories {
+            edges {
+              node {
+                ... on Repository {
+                  name
+                  id
+                  url
+                  stargazers {
+                    totalCount
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-    `
-  });
-  
-  const { user } = data;
-  const starredItems = user.starredRepositories.edges.map(edge => edge.node);
+      `
+    });
 
-  return {
-    props: {
-      starredItems
+    const { user } = data;
+    const starredItems = user.starredRepositories.edges.map(edge => edge.node);
+    console.log(starredItems);
+
+    return {
+      props: {
+        starredItems
+      }
     }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    // Handle the error here (optional)
+    // You can return an empty object or redirect to an error page
+    // return { props: {}, notFound: true };  // Redirect to 404
+    // return { props: { error: 'Failed to fetch data' } }; // Display error message
   }
+
 }
