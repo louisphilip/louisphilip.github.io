@@ -11,6 +11,74 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from '@apollo/client/link/context';
 
 export default function PortfolioThree({ starredItems }) {
+  const [filteredItem, setFilteredItem] = useState([]);
+  const [activeTab, setActiveTab] = useState("All");
+  const [modalContent, setModalContent] = useState();
+  const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    async function getGithubStars() {
+      const httpLink = createHttpLink({
+        uri: 'https://api.github.com/graphql',
+      });
+      const authLink = setContext((_, { headers }) => {
+        return {
+          headers: {
+            ...headers,
+            authorization: `Bearer ${process.env.GH_ACCESS_TOKEN}`,
+          }
+        }
+      });
+    
+      const client = new ApolloClient({
+        link: authLink.concat(httpLink),
+        cache: new InMemoryCache()
+      });
+    
+    
+      const { data } = await client.query({
+        query: gql`
+          {
+            user(login: "louisphilip") {
+              starredRepositories {
+                edges {
+                  node {
+                    ... on Repository {
+                      name
+                      id
+                      url
+                      stargazers {
+                        totalCount
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          `
+      });
+    
+      const { user } = data;
+      const starredItems = user.starredRepositories.edges.map(edge => edge.node);
+      console.log(starredItems);
+    
+      return {
+        props: {
+          starredItems
+        }
+      }
+    
+    }
+    getGithubStars();
+    if (activeTab == "All") {
+      setFilteredItem(portfolioData);
+    } else {
+      const filtered = portfolioData.filter((elm) =>
+        elm.category.includes(activeTab)
+      );
+      setFilteredItem(filtered);
+    }
+  }, [activeTab]);
   return (
     <>
       <div className="bostami-page-content-wrap">
@@ -24,7 +92,7 @@ export default function PortfolioThree({ starredItems }) {
           <div className="row">
             <div className="col-12">
               <ul className="fillter-btn-wrap buttonGroup isotop-menu-wrapper mb-30">
-                
+
               </ul>
             </div>
             <div>
@@ -52,67 +120,4 @@ export default function PortfolioThree({ starredItems }) {
       </div>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
-  });
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.GH_ACCESS_TOKEN}`,
-      }
-    }
-  });
-
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
-  });
-
-  try {
-
-    const { data } = await client.query({
-      query: gql`
-      {
-        user(login: "louisphilip") {
-          starredRepositories {
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  id
-                  url
-                  stargazers {
-                    totalCount
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      `
-    });
-
-    const { user } = data;
-    const starredItems = user.starredRepositories.edges.map(edge => edge.node);
-    console.log(starredItems);
-
-    return {
-      props: {
-        starredItems
-      }
-    }
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    // Handle the error here (optional)
-    // You can return an empty object or redirect to an error page
-    // return { props: {}, notFound: true };  // Redirect to 404
-    return { props: { error: 'Failed to fetch data' } }; // Display error message
-  }
-
 }
