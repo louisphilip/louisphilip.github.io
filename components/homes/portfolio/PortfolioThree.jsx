@@ -11,20 +11,6 @@ import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client
 import { setContext } from '@apollo/client/link/context';
 
 export default function PortfolioThree({ starredItems }) {
-  const [filteredItem, setFilteredItem] = useState([]);
-  const [activeTab, setActiveTab] = useState("All");
-  const [modalContent, setModalContent] = useState();
-  const [showModal, setShowModal] = useState(false);
-  useEffect(() => {
-    if (activeTab == "All") {
-      setFilteredItem(portfolioData);
-    } else {
-      const filtered = portfolioData.filter((elm) =>
-        elm.category.includes(activeTab)
-      );
-      setFilteredItem(filtered);
-    }
-  }, [activeTab, starredItems]);
   return (
     <>
       <div className="bostami-page-content-wrap">
@@ -38,17 +24,7 @@ export default function PortfolioThree({ starredItems }) {
           <div className="row">
             <div className="col-12">
               <ul className="fillter-btn-wrap buttonGroup isotop-menu-wrapper mb-30">
-                {filterButtons.map((elm, i) => (
-                  <li
-                    onClick={() => setActiveTab(elm.text)}
-                    key={i}
-                    className={`fillter-btn ${
-                      activeTab == elm.text ? "is-checked" : ""
-                    } `}
-                  >
-                    {elm.text}
-                  </li>
-                ))}
+                
               </ul>
             </div>
             <div>
@@ -65,70 +41,6 @@ export default function PortfolioThree({ starredItems }) {
                 <p>Loading starred repositories...</p>
               )}
             </div>
-
-            {/* <div className="col-12">
-              <div id="fillter-item-active" className="fillter-item-wrap ">
-                <AnimatePresence>
-                  <ResponsiveMasonry
-                    columnsCountBreakPoints={{
-                      350: 1,
-                      850: 2,
-                      1100: 3,
-                      1200: 2,
-                    }}
-                  >
-                    <Masonry>
-                      {filteredItem.map((elm, i) => (
-                        <motion.div
-                          layout
-                          initial={{ opacity: 0, scale: 0 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.5 }}
-                          transition={{ duration: 0.3 }}
-                          key={elm.id}
-                          className={elm.class}
-                          style={{ width: "100%" }}
-                        >
-                          <div
-                            style={{ width: "100%" }}
-                            className={`fillter-item ${elm.bgClass}`}
-                          >
-                            <a
-                              className="img cursor-pointer"
-                              data-bs-toggle="modal"
-                            >
-                              <Image
-                                width={310}
-                                style={{ width: "100%", height: "fit-content" }}
-                                height={310}
-                                src={elm.imgSrc}
-                                alt="portfolio"
-                                onClick={() => {
-                                  setModalContent(elm);
-                                  setShowModal(true);
-                                }}
-                              />
-                            </a>
-                            <span className="item-subtitle">
-                              {elm.subtitle}
-                            </span>
-                            <h6
-                              className="item-title"
-                              onClick={() => {
-                                setModalContent(elm);
-                                setShowModal(true);
-                              }}
-                            >
-                              <a className="cursor-pointer">{elm.title}</a>
-                            </h6>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </Masonry>
-                  </ResponsiveMasonry>
-                </AnimatePresence>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -138,11 +50,6 @@ export default function PortfolioThree({ starredItems }) {
           </span>
         </div>
       </div>
-      <Modal
-        setShowModal={setShowModal}
-        showModal={showModal}
-        modalContent={modalContent}
-      />
     </>
   );
 }
@@ -205,7 +112,7 @@ export async function getStaticProps() {
     // Handle the error here (optional)
     // You can return an empty object or redirect to an error page
     // return { props: {}, notFound: true };  // Redirect to 404
-    // return { props: { error: 'Failed to fetch data' } }; // Display error message
+    return { props: { error: 'Failed to fetch data' } }; // Display error message
   }
 
 }
