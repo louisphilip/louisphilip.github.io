@@ -62,7 +62,6 @@ export default function PortfolioThree() {
 
         const { user } = data;
         const starredItems = user.starredRepositories.edges.map(edge => edge.node);
-        console.log(starredItems);
         setItems(starredItems);
       } catch (error) {
         setError(error);
