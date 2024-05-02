@@ -3,9 +3,9 @@ import HeaderFour from "@/components/homes/headers/HeaderFour";
 import HeaderThree from "@/components/homes/headers/HeaderThree";
 import PersonalInfoThree from "@/components/homes/personalInfo/PersonalInfoThree";
 export const metadata = {
-  title: "Blog-3 || Bostami - Professional portfolio NextJS Template",
+  title: "Blog || LP Shahim",
   description:
-    "Discover Botami,the most impressive portfolio template for work showcase, blog",
+    "Discover my blogs",
 };
 import React from "react";
 

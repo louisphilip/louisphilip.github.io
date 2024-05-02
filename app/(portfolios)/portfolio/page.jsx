@@ -5,9 +5,9 @@ import PortfolioThree from "@/components/homes/portfolio/PortfolioThree";
 
 import React from "react";
 export const metadata = {
-  title: "Portfolio-3 || Bostami - Professional portfolio NextJS Template",
+  title: "Portfolio || LP Shahim",
   description:
-    "Discover Botami,the most impressive portfolio template for work showcase, blog",
+    "Discover what keeps me busy",
 };
 export default function page() {
   return (
