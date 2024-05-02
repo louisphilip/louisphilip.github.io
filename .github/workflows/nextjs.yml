@@ -77,6 +77,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           NEXT_PUBLIC_GH_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_GH_ACCESS_TOKEN }}
+          NEXT_PUBLIC_MAIL_SERVICE: ${{ secrets.NEXT_PUBLIC_MAIL_SERVICE }}
+          NEXT_PUBLIC_MAIL_TEMPLATE: ${{ secrets.NEXT_PUBLIC_MAIL_TEMPLATE }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

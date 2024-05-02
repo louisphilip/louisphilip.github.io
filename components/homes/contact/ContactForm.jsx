@@ -1,6 +1,3 @@
-
-
-
 "use client";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -10,8 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 export default function ContactForm() {
   const [activeInputBoxes, setActiveInputBoxes] = useState([])
   const form = useRef();
-  const service = process.env.SERVICE;
-  const template = process.env.TEMPLATE;
+  const service = process.env.NEXT_PUBLIC_MAIL_SERVICE;
+  const template = process.env.NEXT_PUBLIC_MAIL_TEMPLATE;
 
   // use Email js for receive message
 
@@ -19,8 +16,8 @@ export default function ContactForm() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_0mk0xhv",
-        "template_28mxz0h",
+        service,
+        template,
         form.current,
         "PbyZxPpo8FAlXaFUZ"
       )
