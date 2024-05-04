@@ -1,7 +1,7 @@
-import AboutThree from "@/components/homes/about/AboutThree";
-import HeaderFour from "@/components/homes/headers/HeaderFour";
-import HeaderThree from "@/components/homes/headers/HeaderThree";
-import PersonalInfoThree from "@/components/homes/personalInfo/PersonalInfoThree";
+import AboutThree from "@/components/about/AboutThree";
+import HeaderFour from "@/components/headers/HeaderFour";
+import HeaderThree from "@/components/headers/HeaderThree";
+import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
 import React from "react";
 
 export const metadata = {

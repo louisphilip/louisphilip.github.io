@@ -1,14 +1,13 @@
-import BlogsThree from "@/components/homes/blogs/BlogsThree";
-import HeaderFour from "@/components/homes/headers/HeaderFour";
-import HeaderThree from "@/components/homes/headers/HeaderThree";
-import PersonalInfoThree from "@/components/homes/personalInfo/PersonalInfoThree";
-export const metadata = {
-  title: "Blog || LP Shahim",
-  description:
-    "Discover my blogs",
-};
+import HeaderFour from "@/components/headers/HeaderFour";
+import HeaderThree from "@/components/headers/HeaderThree";
+import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
+import ResumeThree from "@/components/resume/ResumeThree";
 import React from "react";
-
+export const metadata = {
+  title: "Resume || LP Shahim",
+  description:
+    "Discover what I can do",
+};
 export default function page() {
   return (
     <>
@@ -19,7 +18,7 @@ export default function page() {
             <PersonalInfoThree />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <HeaderThree />
-              <BlogsThree />
+              <ResumeThree />
             </div>
           </div>
         </div>

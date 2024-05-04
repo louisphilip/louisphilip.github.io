@@ -1,6 +1,6 @@
-import AboutTwo from "@/components/homes/about/AboutTwo";
-import HeaderTwo from "@/components/homes/headers/HeaderTwo";
-import PersonalInfoTwo from "@/components/homes/personalInfo/PersonalInfoTwo";
+import AboutTwo from "@/components/about/AboutTwo";
+import HeaderTwo from "@/components/headers/HeaderTwo";
+import PersonalInfoTwo from "@/components/personalInfo/PersonalInfoTwo";
 import React from "react";
 export const metadata = {
   title: "About || LP Shahim",
