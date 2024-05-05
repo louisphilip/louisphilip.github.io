@@ -35,7 +35,7 @@ export default function BlogsThree({ posts }) {
     }
     fetchData();
     setShowSlider(true);
-  }, []);
+  }, [items]);
 
   if (error) {
     return (
