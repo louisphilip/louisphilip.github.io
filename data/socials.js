@@ -26,7 +26,7 @@ export const socialMediaData = [
   {
     id: 5,
     className: "fa-brands fa-github",
-    href: "https://medium.com/@louisphilip_s",
+    href: "https://github.com/louisphilip",
     color: "#144679",
   },
 ];
