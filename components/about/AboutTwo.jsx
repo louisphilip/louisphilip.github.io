@@ -110,7 +110,7 @@ export default function AboutTwo() {
         <div className="row">
           <div className="col-12">
             <div className="bostami-section-title-wrap text-center mb-35">
-              <h2 className="section-title">Clients</h2>
+              <h2 className="section-title">Technologies</h2>
             </div>
           </div>
 
