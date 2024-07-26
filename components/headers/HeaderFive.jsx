@@ -14,19 +14,19 @@ export default function HeaderTwo() {
   const addDarkbg = () => {
     if (
       document.body.style.backgroundImage !=
-      "url(/assets/img/bg/lp-bg-dark-1.png"
+      "url(/assets/img/bg/bg-dark.svg"
     ) {
       document.body.style.backgroundImage =
-        "url(/assets/img/bg/lp-bg-dark-1.png";
+        "url(/assets/img/bg/bg-dark.svg";
 
       setDarkMode(true);
     }
   };
   const addlightBg = () => {
     if (
-      document.body.style.backgroundImage != "url(/assets/img/bg/lp-bg-1.png)"
+      document.body.style.backgroundImage != "url(/assets/img/bg/bg-light.svg)"
     ) {
-      document.body.style.backgroundImage = "url(/assets/img/bg/lp-bg-1.png)";
+      document.body.style.backgroundImage = "url(/assets/img/bg/bg-light.svg)";
 
       setDarkMode(false);
     }
