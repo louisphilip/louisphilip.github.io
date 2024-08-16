@@ -5,7 +5,7 @@ import PortfolioThree from "@/components/portfolio/PortfolioThree";
 
 import React from "react";
 export const metadata = {
-  title: "Portfolio || LP Shahim",
+  title: "Github || LP Shahim",
   description:
     "Discover what keeps me busy",
 };
