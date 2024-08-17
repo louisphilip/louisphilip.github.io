@@ -1,7 +1,7 @@
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
-import PortfolioThree from "@/components/portfolio/PortfolioThree";
+import Portfolio from "@/components/portfolio/Portfolio";
 
 import React from "react";
 export const metadata = {
@@ -19,7 +19,7 @@ export default function page() {
             <PersonalInfoThree />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
-              <PortfolioThree />
+              <Portfolio />
             </div>
           </div>
         </div>

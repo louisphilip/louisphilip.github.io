@@ -10,7 +10,7 @@ import Image from "next/image";
 import { ApolloClient, createHttpLink, InMemoryCache, gql } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 
-export default function PortfolioThree() {
+export default function Portfolio() {
   const [filteredItem, setFilteredItem] = useState([]);
   const [activeTab, setActiveTab] = useState("All");
   const [modalContent, setModalContent] = useState();
