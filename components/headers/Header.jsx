@@ -1,6 +1,6 @@
 "use client";
 
-import { menuItemsThree } from "@/data/menu";
+import { menuItems } from "@/data/menu";
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function Header() {
       <div className="bostami-main-menu-wrap">
         <nav className="bastami-main-menu main_menu_3">
           <ul>
-            {menuItemsThree.map((elm, i) => (
+            {menuItems.map((elm, i) => (
               <li key={i} className={pathname == elm.href ? "active" : ""}>
                 <Link
                   href={elm.href}
