@@ -1,15 +1,15 @@
-import { knoledges } from "@/data/knoledges";
+import { domainKnowledge } from "@/data/domainKnowledge";
 import React from "react";
 
-export default function Knowledges() {
+export default function domainKnowledge() {
   return (
     <div className="col-xl-6 col-lg-5">
       <div className="bostami-section-title-wrap mb-20">
-        <h4 className="section-title">Knowledges</h4>
+        <h4 className="section-title">Domain Knowledge</h4>
       </div>
 
       <div className="knowledeges-item-wrap">
-        {knoledges.map((elm, i) => (
+        {domainKnowledge.map((elm, i) => (
           <span key={i} className="gk-item">
             {elm}
           </span>
