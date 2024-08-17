@@ -1,4 +1,4 @@
-import BlogsThree from "@/components/blogs/BlogsThree";
+import Blogs from "@/components/blogs/Blogs";
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfo from "@/components/personalInfo/PersonalInfo";
@@ -19,7 +19,7 @@ export default function page() {
             <PersonalInfo />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
-              <BlogsThree />
+              <Blogs />
             </div>
           </div>
         </div>

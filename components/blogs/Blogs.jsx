@@ -15,7 +15,7 @@ const chunkArray = (arr, chunkSize) => {
   return result;
 };
 
-export default function BlogsThree({ posts }) {
+export default function Blogs({ posts }) {
   const [outputArray, setfirst] = useState(chunkArray(blogData, 4));
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
