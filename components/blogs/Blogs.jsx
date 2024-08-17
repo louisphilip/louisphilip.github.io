@@ -49,7 +49,6 @@ export default function Blogs({ posts }) {
       draggable: true,
       progress: undefined,
     });
-  } else {
     return (
       <>
         <div className="bostami-page-content-wrap">
