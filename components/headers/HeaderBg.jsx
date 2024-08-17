@@ -5,7 +5,7 @@ import { menuItemsThree } from "@/data/menu";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeaderFour() {
+export default function HeaderBg() {
   const [darkMode, setDarkMode] = useState(false);
 
   const addDarkbg = () => {
