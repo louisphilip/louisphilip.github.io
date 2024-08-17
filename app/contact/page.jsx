@@ -1,4 +1,4 @@
-import ContactThree from "@/components/contact/ContactThree";
+import Contact from "@/components/contact/Contact";
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
@@ -19,7 +19,7 @@ export default function page() {
             <PersonalInfoThree />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
-              <ContactThree />
+              <Contact />
             </div>
           </div>
         </div>
