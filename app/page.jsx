@@ -1,4 +1,4 @@
-import AboutThree from "@/components/about/AboutThree";
+import About from "@/components/about/About";
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
@@ -20,7 +20,7 @@ export default function Home() {
             <PersonalInfoThree />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
-              <AboutThree />
+              <About />
             </div>
           </div>
         </div>
