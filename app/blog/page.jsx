@@ -1,7 +1,7 @@
 import BlogsThree from "@/components/blogs/BlogsThree";
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
-import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
+import PersonalInfo from "@/components/personalInfo/PersonalInfo";
 export const metadata = {
   title: "Blog || LP Shahim",
   description:
@@ -16,7 +16,7 @@ export default function page() {
         <HeaderBg />
         <div className="container z-index-3">
           <div className="row">
-            <PersonalInfoThree />
+            <PersonalInfo />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
               <BlogsThree />
