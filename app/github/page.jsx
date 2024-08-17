@@ -1,12 +1,13 @@
 import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfo from "@/components/personalInfo/PersonalInfo";
-import Resume from "@/components/resume/Resume";
+import Github from "@/components/github/Github";
+
 import React from "react";
 export const metadata = {
-  title: "Resume || LP Shahim",
+  title: "Github || LP Shahim",
   description:
-    "Discover what I can do",
+    "Discover what keeps me busy",
 };
 export default function page() {
   return (
@@ -18,7 +19,7 @@ export default function page() {
             <PersonalInfo />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <Header />
-              <Resume />
+              <Github />
             </div>
           </div>
         </div>

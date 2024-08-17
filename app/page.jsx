@@ -1,7 +1,7 @@
-import AboutThree from "@/components/about/AboutThree";
-import HeaderFour from "@/components/headers/HeaderFour";
-import HeaderThree from "@/components/headers/HeaderThree";
-import PersonalInfoThree from "@/components/personalInfo/PersonalInfoThree";
+import About from "@/components/about/About";
+import HeaderBg from "@/components/headers/HeaderBg";
+import Header from "@/components/headers/Header";
+import PersonalInfo from "@/components/personalInfo/PersonalInfo";
 import React from "react";
 
 export const metadata = {
@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       <div className="page-wrapper home-3">
-        <HeaderFour />
+        <HeaderBg />
         <div className="container z-index-3">
           <div className="row">
-            <PersonalInfoThree />
+            <PersonalInfo />
             <div className="col-xxl-8 col-xl-8 col-lg-8">
-              <HeaderThree />
-              <AboutThree />
+              <Header />
+              <About />
             </div>
           </div>
         </div>

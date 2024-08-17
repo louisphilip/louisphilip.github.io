@@ -1,6 +1,4 @@
-import AboutTwo from "@/components/about/AboutTwo";
-import HeaderTwo from "@/components/headers/HeaderTwo";
-import PersonalInfoTwo from "@/components/personalInfo/PersonalInfoTwo";
+import About from "@/components/about/About";
 import React from "react";
 export const metadata = {
   title: "About || LP Shahim",
@@ -14,7 +12,7 @@ export default function page() {
         <HeaderTwo />
         <div className="bostami-page-area z-index-3">
           <div className="container">
-            <AboutTwo />
+            <About />
           </div>
         </div>
       </div>

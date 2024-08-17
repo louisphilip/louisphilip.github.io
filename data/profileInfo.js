@@ -7,5 +7,4 @@ export const profileInfo = {
    imageSrcOne:'/assets/img/me.svg',
    imageSrcTwo:'/assets/img/me.svg',
    imageSrcThree:'/assets/img/me.svg',
-
 }

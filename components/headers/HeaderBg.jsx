@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Menu from "../menus/Menu";
-import { menuItemsThree } from "@/data/menu";
+import { menuItems } from "@/data/menu";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeaderFour() {
+export default function HeaderBg() {
   const [darkMode, setDarkMode] = useState(false);
 
   const addDarkbg = () => {
@@ -96,7 +96,7 @@ export default function HeaderFour() {
 
         <div className="mobile-menu-wrap">
           <div className={`mobile-menu mobile_menu_3 ${menuOpen && "active"} `}>
-            <Menu setMenuOpen={setMenuOpen} data={menuItemsThree} />
+            <Menu setMenuOpen={setMenuOpen} data={menuItems} />
           </div>
         </div>
       </div>

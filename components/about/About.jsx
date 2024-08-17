@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { bioData } from "@/data/bioData";
 import Image from "next/image";
 
-export default function AboutThree() {
+export default function About() {
   const [showSlider, setShowSlider] = useState(false);
   useEffect(() => {
     setShowSlider(true);

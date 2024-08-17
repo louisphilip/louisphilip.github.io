@@ -1,19 +1,20 @@
+import { contactData } from "@/data/contactData";
 import { profileInfo } from "@/data/profileInfo";
 import { socialMediaData } from "@/data/socials";
 import Image from "next/image";
 import React from "react";
 
-export default function PersonalInfoTwo() {
+export default function PersonalInfo() {
   return (
-    <div className="col-12">
-      <div className="bostami-parsonal-info-area bostami-parsonal-info-2-area">
+    <div className="col-xxl-4 col-xl-4 col-lg-4">
+      <div className="bostami-parsonal-info-area">
         <div className="bostami-parsonal-info-wrap">
           <div className="bostami-parsonal-info-img">
             <Image
               width={240}
               height={240}
               src={profileInfo.imageSrcTwo}
-              alt="profile"
+              alt="author"
             />
           </div>
 
@@ -32,8 +33,25 @@ export default function PersonalInfoTwo() {
             ))}
           </ul>
 
+          <div className="bostami-parsonal-info-contact mb-30">
+            {contactData.map((elm, i) => (
+              <div key={i} className="bostami-parsonal-info-contact-item">
+                <div
+                  style={{ color: `${elm.color}`, fontSize: `${elm.fontSize}` }}
+                  className="icon"
+                >
+                  <i className={elm.iconClass}></i>
+                </div>
+                <div className="text">
+                  <span>{elm.text.label}</span>
+                  <p>{elm.text.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="bostami-parsonal-info-btn">
-            <a className="btn-2 circle" href="/cv.pdf" download>
+            <a className="btn-2" href="/cv.pdf" download>
               <span style={{ color: "#fff" }} className="icon">
                 <i className="fa-regular fa-download"></i>
               </span>

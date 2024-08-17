@@ -1,108 +1,39 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Menu from "../menus/Menu";
+
 import { menuItems } from "@/data/menu";
-import Image from "next/image";
+import React from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
-  const addDarkbg = () => {
-    if (
-      document.body.style.backgroundImage !=
-      "url(/assets/img/bg/bg-dark.svg"
-    ) {
-      document.body.style.backgroundImage =
-        "url(/assets/img/bg/bg-dark.svg";
-
-      setDarkMode(true);
-    }
-  };
-
-  const addlightBg = () => {
-    if (
-      document.body.style.backgroundImage != "url(/assets/img/bg/bg-light.svg)"
-    ) {
-      document.body.style.backgroundImage = "url(/assets/img/bg/bg-light.svg)";
-
-      setDarkMode(false);
-    }
-  };
-
-  const handleDarkmode = () => {
-    const currentState = localStorage?.getItem("idDarkMode");
-
-    if (JSON.parse(currentState) == true) {
-      localStorage.setItem("idDarkMode", false);
-      document.body.classList.remove("dark-theme");
-
-      addlightBg();
-    } else {
-      localStorage?.setItem("idDarkMode", true);
-      document.body.classList.add("dark-theme");
-      addDarkbg();
-    }
-  };
-  const [menuOpen, setMenuOpen] = useState(false);
-  useEffect(() => {
-    const currentState = localStorage?.getItem("idDarkMode");
-    if (JSON.parse(currentState) == true) {
-      document.body.classList.add("dark-theme");
-      addDarkbg();
-    } else {
-      document.body.classList.remove("dark-theme");
-      addlightBg();
-    }
-  }, []);
+  const pathname = usePathname();
+ 
 
   return (
-    <div className="bostami-header-area mb-30 ">
-      <div className="container">
-        <div className="bostami-header-wrap">
-          <div className="row align-items-center">
-            <div className="col-6">
-              <div className="bostami-header-logo">
-                <Link className="site-logo" href="/">
-                  <Image
-                    width={150}
-                    height={150}
-                    src="/assets/img/logo/logo.png"
-                    alt="logo"
-                  />
+    <div className="text-right">
+      <div className="bostami-main-menu-wrap">
+        <nav className="bastami-main-menu main_menu_3">
+          <ul>
+            {menuItems.map((elm, i) => (
+              <li key={i} className={pathname == elm.href ? "active" : ""}>
+                <Link
+                  href={elm.href}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span style={{ fontSize: "24px", marginBottom: "12px" }}>
+                    <i className={elm.icon}></i>
+                  </span>
+                  <div> {elm.text}</div>
                 </Link>
-              </div>
-            </div>
-
-            <div className="col-6">
-              <div className="bostami-header-menu-btn text-right">
-                <div
-                  className="dark-btn dark-btn-stored mode-btn"
-                  onClick={() => handleDarkmode()}
-                >
-                  {darkMode ? (
-                    <i className="sunicon fa-light fa-sun-bright"></i>
-                  ) : (
-                    <i className="moonicon fa-solid fa-moon"></i>
-                  )}
-                </div>
-                <div
-                  className={`menu-btn toggle_menu ${menuOpen && "active"} `}
-                  onClick={() => setMenuOpen((pre) => !pre)}
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mobile-menu-wrap">
-          <div className={`mobile-menu mobile_menu ${menuOpen && "active"} `}>
-            <Menu setMenuOpen={setMenuOpen} data={menuItems} />
-          </div>
-        </div>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </div>
   );

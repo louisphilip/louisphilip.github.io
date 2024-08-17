@@ -2,7 +2,7 @@
 
 import ContactForm from "./ContactForm";
 
-export default function ContactThree() {
+export default function Contact() {
  
   return (
     <div className="bostami-page-content-wrap">
