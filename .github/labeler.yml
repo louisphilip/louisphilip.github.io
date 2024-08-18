@@ -1,3 +1,15 @@
 root:
 - changed-files:
   - any-glob-to-any-file: '*'
+
+components:
+- changed-files:
+  - any-glob-to-any-file: 'components/**/*'
+
+app:
+- changed-files:
+  - any-glob-to-any-file: 'app/**/*'
+
+public:
+- changed-files:
+  - any-glob-to-any-file: 'public/**/*'
