@@ -1,0 +1,11 @@
+'on:documentation':
+  - any:
+      - '**/*.md'
+      - '!**/README.md'
+
+  - 'README.md'
+
+'on:source':
+  - any:
+    - './**'
+    - '!**/*.md'
