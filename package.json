@@ -24,5 +24,8 @@
     "sass": "^1.70.0",
     "sharp": "^0.33.3",
     "swiper": "^8.0.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.5"
   }
 }
