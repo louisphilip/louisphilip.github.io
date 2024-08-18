@@ -11,4 +11,4 @@ jobs:
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        urls: 'https://www.louisphilipshahim.com'
+        urls: 'https://louisphilipshahim.com/'
