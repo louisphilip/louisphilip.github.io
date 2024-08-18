@@ -8,6 +8,8 @@
 <div align="center">
 
 [![Deploy](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml)
+[![Lighthouse](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml)
+[![Release](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml)
 
 
 </div>
