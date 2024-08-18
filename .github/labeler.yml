@@ -1,11 +1,3 @@
-'on:documentation':
-  - any:
-      - '**/*.md'
-      - '!**/README.md'
-
-  - 'README.md'
-
-'on:source':
-  - any:
-    - './**'
-    - '!**/*.md'
+root:
+- changed-files:
+  - any-glob-to-any-file: '*'
