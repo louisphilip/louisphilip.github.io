@@ -3,6 +3,7 @@ import HeaderBg from "@/components/headers/HeaderBg";
 import Header from "@/components/headers/Header";
 import PersonalInfo from "@/components/personalInfo/PersonalInfo";
 import React from "react";
+import Script from "next/script";
 
 export const metadata = {
   title: "LP Shahim",
@@ -13,6 +14,18 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <Script id="next"
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}>
+      </Script>
+      <Script id="next">
+        {
+          `window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');`
+        }
+      </Script>
       <div className="page-wrapper home-3">
         <HeaderBg />
         <div className="container z-index-3">
