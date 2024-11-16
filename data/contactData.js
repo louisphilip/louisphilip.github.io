@@ -1,16 +1,6 @@
 export const contactData = [
   {
     id: 1,
-    color: "#E93B81",
-    fontSize: "22px",
-    iconClass: "fa-regular fa-mobile",
-    text: {
-      label: "Phone",
-      value: "+27 72 998 5673",
-    },
-  },
-  {
-    id: 2,
     color: "#6AB5B9",
     fontSize: "22px",
     iconClass: "fa-regular fa-envelope-open-text",
@@ -20,7 +10,7 @@ export const contactData = [
     },
   },
   {
-    id: 3,
+    id: 2,
     color: "#FD7590",
     fontSize: "22px",
     iconClass: "fa-solid fa-location-dot",
@@ -30,7 +20,7 @@ export const contactData = [
     },
   },
   {
-    id: 4,
+    id: 3,
     color: "#C17CEB",
     fontSize: "22px",
     iconClass: "fa-light fa-calendar-days",
