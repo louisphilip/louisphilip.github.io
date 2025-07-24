@@ -32,6 +32,7 @@ export default function Resume() {
             <div className="bostami-card-wrap">
               {education.map((elm, i) => (
                 <div
+                  key={i}
                   className={`bostami-card-item ${elm.bgClass} ${
                     i + 1 != education.length && "mb-20"
                   } `}

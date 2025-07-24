@@ -1,6 +1,6 @@
 "use client";
 
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { blogData } from "@/data/blogs";
 
@@ -86,6 +86,7 @@ export default function Blogs({ posts }) {
                         // <div className="row">
                           // <div className="col-lg-6 col-md-6">
                             <div
+                              key={index}
                               className={`blog-slider-single bg-prink `}
                             >
                               <a className="img cursor-pointer">
