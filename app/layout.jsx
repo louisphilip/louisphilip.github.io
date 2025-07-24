@@ -2,6 +2,7 @@
 
 import { ToastContainer } from 'react-toastify'
 import '../public/main.scss'
+import 'swiper/swiper-bundle.css'
 
 
 export default function RootLayout({ children }) {
