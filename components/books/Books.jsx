@@ -14,7 +14,7 @@ export default function Books() {
     const matchesSearch = book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          book.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         book.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                         (book.tags && book.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     
     return matchesCategory && matchesType && matchesSearch;
   });
@@ -316,7 +316,7 @@ export default function Books() {
                       </div>
 
                       <div className="book-tags mb-20">
-                        {book.tags.slice(0, 3).map((tag, index) => (
+                        {book.tags && book.tags.slice(0, 3).map((tag, index) => (
                           <span 
                             key={index} 
                             className="badge me-2 mb-2" 
