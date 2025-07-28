@@ -1,14 +1,14 @@
 name: Lighthouse
-on: 
+on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        urls: 'https://louisphilipshahim.com/'
+      - uses: actions/checkout@master
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          urls: 'https://louisphilipshahim.com/'

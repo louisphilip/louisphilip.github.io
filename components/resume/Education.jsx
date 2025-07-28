@@ -1,34 +1,35 @@
-import { education } from "@/data/education";
-import Image from "next/image";
-import React from "react";
+import { education } from '@/data/education';
+import Image from 'next/image';
+import React from 'react';
 
 export default function Education() {
   return (
-    <div className="col-xl-6 col-lg-7">
-      <div className="bostami-section-title-wrap mb-20">
-        <h4 className="section-title">
+    <div className='col-xl-6 col-lg-7'>
+      <div className='bostami-section-title-wrap mb-20'>
+        <h4 className='section-title'>
           <Image
             width={38}
             height={23}
-            src="/assets/img/icon/edu-icon.png"
-            alt="icon"
+            src='/assets/img/icon/edu-icon.png'
+            alt='icon'
           />
           Education
         </h4>
       </div>
 
-      <div className="bostami-card-wrap">
+      <div className='bostami-card-wrap'>
         {education.map((elm, i) => (
           <div
+            key={i}
             className={`bostami-card-item ${elm.bgClass} ${
-              i + 1 != education.length && "mb-20"
+              i + 1 != education.length && 'mb-20'
             } `}
           >
-            <span className="card-subtitle">{elm.session}</span>
-            <h6 className="card-title">
+            <span className='card-subtitle'>{elm.session}</span>
+            <h6 className='card-title'>
               {elm.cardTitle} <span>- {elm.cardSubtitleSecondary},</span>
             </h6>
-            <p className="card-text">{elm.locatopn}</p>
+            <p className='card-text'>{elm.locatopn}</p>
           </div>
         ))}
       </div>

@@ -1,12 +1,12 @@
-"use client";
-import Image from "next/image";
-import React, { useEffect } from "react";
+'use client';
+import Image from 'next/image';
+import React, { useEffect } from 'react';
 
 export default function Modal({ setShowModal, showModal, modalContent }) {
   useEffect(() => {
-    const handleDocumentClick = (event) => {
-      const modalDialog = document.querySelector(".modal");
-      const modalContent = document.querySelector(".modal-content");
+    const handleDocumentClick = event => {
+      const modalDialog = document.querySelector('.modal');
+      const modalContent = document.querySelector('.modal-content');
 
       // Check if the click is outside of modal-content but inside modal-dialog
       if (
@@ -21,55 +21,55 @@ export default function Modal({ setShowModal, showModal, modalContent }) {
     };
 
     // Attach the event listener when the component mounts
-    document.addEventListener("click", handleDocumentClick);
+    document.addEventListener('click', handleDocumentClick);
 
     // Detach the event listener when the component unmounts
     return () => {
-      document.removeEventListener("click", handleDocumentClick);
+      document.removeEventListener('click', handleDocumentClick);
     };
   }, []); // Empty dependency array ensures the effect runs once after the initial render
 
   return (
     <>
       <div
-        className={`modal h1-modal-box fade ${showModal ? "show" : ""} `}
-        id="h1-blog-1"
-        tabIndex="-1"
-        role="dialog"
+        className={`modal h1-modal-box fade ${showModal ? 'show' : ''} `}
+        id='h1-blog-1'
+        tabIndex='-1'
+        role='dialog'
         style={{
-          transition: "0.4s",
-          display: "block",
-          visibility: `${showModal ? "visible" : "hidden"}`,
+          transition: '0.4s',
+          display: 'block',
+          visibility: `${showModal ? 'visible' : 'hidden'}`,
         }}
       >
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-body">
-              <div className="h1-modal-img">
+        <div className='modal-dialog modal-dialog-centered' role='document'>
+          <div className='modal-content'>
+            <div className='modal-body'>
+              <div className='h1-modal-img'>
                 {modalContent?.imgSrc && (
                   <Image
                     width={800}
                     height={800}
                     src={modalContent?.imgSrc}
                     style={{
-                      width: "100%",
-                      height: "fit-content",
-                      maxHeight: "450px",
-                      objectFit: "cover",
+                      width: '100%',
+                      height: 'fit-content',
+                      maxHeight: '450px',
+                      objectFit: 'cover',
                     }}
-                    alt="blog"
+                    alt='blog'
                   />
                 )}
               </div>
 
-              <div className="blog-meta">
-                <span className="blog-date">{modalContent?.date}</span>
-                <span className="blog-category">{modalContent?.category}</span>
+              <div className='blog-meta'>
+                <span className='blog-date'>{modalContent?.date}</span>
+                <span className='blog-category'>{modalContent?.category}</span>
               </div>
 
-              <h6 className="blog-title">{modalContent?.title}</h6>
+              <h6 className='blog-title'>{modalContent?.title}</h6>
 
-              <div className="h1-modal-paragraph">
+              <div className='h1-modal-paragraph'>
                 {modalContent?.desc.map((elm, i) => (
                   <p key={i}>{elm}</p>
                 ))}
@@ -79,14 +79,14 @@ export default function Modal({ setShowModal, showModal, modalContent }) {
         </div>
       </div>
       {showModal && (
-        <div className="modal-header ">
+        <div className='modal-header '>
           <button
-            type="button"
-            className="close"
-            data-bs-dismiss="modal"
+            type='button'
+            className='close'
+            data-bs-dismiss='modal'
             onClick={() => setShowModal(false)}
           >
-            <i className="far fa-times"></i>
+            <i className='far fa-times'></i>
           </button>
         </div>
       )}

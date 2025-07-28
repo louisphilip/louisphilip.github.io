@@ -4,7 +4,7 @@ import fetchMediumArticles from '../utils/fetchMediumArticles';
 export async function getStaticProps() {
   const articlesData = await fetchMediumArticles();
 
-  const articles = articlesData.map((articleData) => {
+  const articles = articlesData.map(articleData => {
     return new Article(
       articleData.id,
       articleData.title,

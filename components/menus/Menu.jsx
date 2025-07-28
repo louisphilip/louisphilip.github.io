@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 export default function Menu({ setMenuOpen, data }) {
   const pathname = usePathname();
 
   return (
-    <div className="mean-bar">
+    <div className='mean-bar'>
       <a
-        href="#nav"
-        className="meanmenu-reveal"
-        style={{ right: "0px", left: "auto", display: "inline" }}
+        href='#nav'
+        className='meanmenu-reveal'
+        style={{ right: '0px', left: 'auto', display: 'inline' }}
       >
         <span>
           <span>
@@ -18,15 +18,15 @@ export default function Menu({ setMenuOpen, data }) {
           </span>
         </span>
       </a>
-      <nav className="mean-nav">
+      <nav className='mean-nav'>
         <ul>
           {data.map((elm, i) => (
             <li
               key={i}
-              className={` ${i + 1 == data.length && "mean-last"} ${
-                pathname == elm.href && "active"
+              className={` ${i + 1 == data.length && 'mean-last'} ${
+                pathname == elm.href && 'active'
               }  `}
-              style={{ paddingTop: "5px", paddingBottom: "4px" }}
+              style={{ paddingTop: '5px', paddingBottom: '4px' }}
               onClick={() => {
                 setMenuOpen(false);
               }}
@@ -34,7 +34,7 @@ export default function Menu({ setMenuOpen, data }) {
               <Link href={elm.href}>
                 <span>
                   <i
-                    style={{ fontSize: "18px", marginRight: "10px" }}
+                    style={{ fontSize: '18px', marginRight: '10px' }}
                     className={elm.icon}
                   ></i>
                 </span>

@@ -1,31 +1,30 @@
-"use client";
+'use client';
 
-import { menuItems } from "@/data/menu";
-import React from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { menuItems } from '@/data/menu';
+import React from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
   const pathname = usePathname();
- 
 
   return (
-    <div className="text-right">
-      <div className="bostami-main-menu-wrap">
-        <nav className="bastami-main-menu main_menu_3">
+    <div className='text-right'>
+      <div className='bostami-main-menu-wrap'>
+        <nav className='bastami-main-menu main_menu_3'>
           <ul>
             {menuItems.map((elm, i) => (
-              <li key={i} className={pathname == elm.href ? "active" : ""}>
+              <li key={i} className={pathname == elm.href ? 'active' : ''}>
                 <Link
                   href={elm.href}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                    justifyContent: "center",
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
                   }}
                 >
-                  <span style={{ fontSize: "24px", marginBottom: "12px" }}>
+                  <span style={{ fontSize: '24px', marginBottom: '12px' }}>
                     <i className={elm.icon}></i>
                   </span>
                   <div> {elm.text}</div>
