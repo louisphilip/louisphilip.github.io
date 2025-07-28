@@ -126,21 +126,15 @@ export default function Blogs() {
             <h2 className="page-title">LP's Blogs</h2>
           </div>
           <div className="error-state text-center py-60">
-            <div className="alert alert-danger" role="alert">
-              <h4 className="alert-heading">Unable to load articles</h4>
-              <p>{error}</p>
-              <hr />
-              <p className="mb-0">
-                <a 
-                  href="https://medium.com/@louisphilip_s" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-primary"
-                >
-                  Read on Medium <i className="fab fa-medium ms-2"></i>
-                </a>
-              </p>
-            </div>
+            <i className="fa-brands fa-medium fa-3x text-danger mb-3"></i>
+            <h4>Unable to load articles</h4>
+            <p className="text-muted">{error}</p>
+            <button 
+              className="btn btn-outline-primary"
+              onClick={() => window.location.reload()}
+            >
+              Try Again
+            </button>
           </div>
         </div>
       </div>
@@ -153,14 +147,13 @@ export default function Blogs() {
         <div className="section-wrapper pl-60 pr-60 pt-60">
           <div className="bostami-page-title-wrap mb-15">
             <h2 className="page-title">LP's Blogs</h2>
-            <p className="page-subtitle">Latest articles from Medium ({articles.length} articles)</p>
           </div>
         </div>
 
         <div className="section-wrapper pr-60 pl-60 mb-60">
           {articles.length === 0 ? (
             <div className="no-articles text-center py-60">
-              <i className="fas fa-newspaper fa-3x text-muted mb-3"></i>
+              <i className="fa-brands fa-medium fa-3x text-muted mb-3"></i>
               <h4>No articles found</h4>
               <p className="text-muted">Check back later for new content!</p>
               <a 
@@ -173,104 +166,78 @@ export default function Blogs() {
               </a>
             </div>
           ) : (
-            <div className="blog-slider-wrap">
-              <Swiper
-                modules={[Navigation, Pagination]}
-                pagination={{
-                  el: ".blog-pagination",
-                  clickable: true,
-                  dynamicBullets: true,
-                }}
-                navigation={{
-                  nextEl: ".blog-slider-next",
-                  prevEl: ".blog-slider-prev",
-                }}
-                spaceBetween={30}
-                slidesPerView={1}
-                breakpoints={{
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  1200: {
-                    slidesPerView: 3,
-                  },
-                }}
-                loop={articles.length > 3}
-                className="blog-slider"
-              >
-                {articles.map((article) => (
-                  <SwiperSlide key={article.id}>
-                    <article className="blog-card bg-prink">
-                      {/* Article Image */}
-                      <div className="blog-image-container">
-                        {article.image ? (
-                          <img
-                            src={article.image}
-                            alt={article.title}
-                            className="blog-image"
-                            style={{
-                              width: "100%",
-                              height: "200px",
-                              objectFit: "cover",
-                              borderRadius: "8px 8px 0 0"
-                            }}
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.nextSibling.style.display = 'flex';
-                            }}
-                          />
-                        ) : null}
-                        <div 
-                          className="blog-image-fallback"
-                          style={{
-                            display: article.image ? 'none' : 'flex',
-                            width: "100%",
-                            height: "200px",
-                            backgroundColor: "#f8f9fa",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            borderRadius: "8px 8px 0 0"
-                          }}
-                        >
-                          <i className="fab fa-medium fa-3x text-muted"></i>
+            <div className="bostami-what-do-wrap mb-30">
+              <div className="row">
+                {articles.map((article, index) => (
+                  <div key={article.id} className="col-xxl-6 col-xl-6 col-lg-6 mb-30">
+                    <div className="bostami-what-do-item bg-light-white-2">
+                      {/* Article Icon */}
+                      <div className="icon" style={{ margin: "0", minWidth: "60px" }}>
+                        <div style={{
+                          width: "60px",
+                          height: "60px",
+                          backgroundColor: "#00ab6c",
+                          borderRadius: "12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "white",
+                          fontSize: "24px"
+                        }}>
+                          <i className="fa-brands fa-medium"></i>
                         </div>
                       </div>
 
                       {/* Article Content */}
-                      <div className="blog-content p-4">
-                        <div className="blog-meta mb-3">
-                          <span className="blog-date">
-                            <i className="fas fa-calendar-alt me-2"></i>
-                            {article.publishDate}
-                          </span>
-                          <span className="blog-reading-time ms-3">
-                            <i className="fas fa-clock me-2"></i>
-                            {article.readingTime}
-                          </span>
-                        </div>
-
-                        <h6 className="blog-title mb-3">
+                      <div className="text">
+                        <h4 className="title">
                           <a 
                             href={article.link} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-decoration-none"
+                            style={{ textDecoration: 'none', color: 'inherit' }}
                           >
                             {article.title}
                           </a>
-                        </h6>
+                        </h4>
 
-                        {article.cleanDescription && (
-                          <p className="blog-excerpt text-muted mb-3">
-                            {article.cleanDescription}
-                          </p>
-                        )}
+                        {/* Article Meta */}
+                        <div style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '15px', 
+                          marginBottom: '15px',
+                          fontSize: '14px',
+                          color: '#666'
+                        }}>
+                          <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <i className="fa-regular fa-calendar"></i>
+                            {article.publishDate}
+                          </span>
+                          <span style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <i className="fa-regular fa-clock"></i>
+                            {article.readingTime}
+                          </span>
+                        </div>
 
                         {/* Categories */}
                         {article.categories && article.categories.length > 0 && (
-                          <div className="blog-categories mb-3">
-                            {article.categories.slice(0, 3).map((category, index) => (
-                              <span key={index} className="category-tag badge bg-light text-dark me-2">
+                          <div style={{ marginBottom: '15px' }}>
+                            {article.categories.slice(0, 2).map((category, catIndex) => (
+                              <span 
+                                key={catIndex}
+                                style={{
+                                  display: 'inline-block',
+                                  backgroundColor: '#e5f3ff',
+                                  color: '#0066cc',
+                                  padding: '3px 8px',
+                                  borderRadius: '12px',
+                                  fontSize: '12px',
+                                  fontWeight: '500',
+                                  marginRight: '8px',
+                                  marginBottom: '5px'
+                                }}
+                              >
                                 {category}
                               </span>
                             ))}
@@ -278,52 +245,70 @@ export default function Blogs() {
                         )}
 
                         {/* Article Actions */}
-                        <div className="blog-actions d-flex justify-content-between align-items-center">
-                          <a 
-                            href={article.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-primary"
-                          >
-                            Read More <i className="fas fa-arrow-right ms-1"></i>
-                          </a>
+                        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                           <button
-                            className="btn btn-sm btn-light"
                             onClick={() => {
                               setModalContent(article);
                               setShowModal(true);
                             }}
+                            style={{
+                              backgroundColor: '#007bff',
+                              color: 'white',
+                              border: 'none',
+                              padding: '8px 16px',
+                              borderRadius: '6px',
+                              fontSize: '14px',
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              transition: 'all 0.3s ease'
+                            }}
+                            onMouseOver={(e) => e.target.style.backgroundColor = '#0056b3'}
+                            onMouseOut={(e) => e.target.style.backgroundColor = '#007bff'}
                           >
-                            <i className="fas fa-info-circle"></i>
+                            <i className="fa-regular fa-eye"></i>
+                            Preview
                           </button>
+                          <a 
+                            href={article.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              backgroundColor: '#00ab6c',
+                              color: 'white',
+                              textDecoration: 'none',
+                              padding: '8px 16px',
+                              borderRadius: '6px',
+                              fontSize: '14px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '6px',
+                              transition: 'all 0.3s ease'
+                            }}
+                            onMouseOver={(e) => e.target.style.backgroundColor = '#008f5a'}
+                            onMouseOut={(e) => e.target.style.backgroundColor = '#00ab6c'}
+                          >
+                            <i className="fa-solid fa-external-link"></i>
+                            Read on Medium
+                          </a>
                         </div>
                       </div>
-                    </article>
-                  </SwiperSlide>
+                    </div>
+                  </div>
                 ))}
-              </Swiper>
-
-              {/* Navigation */}
-              <div className="blog-slider-navigation mt-4">
-                <button className="blog-slider-prev slider-btn">
-                  <i className="fas fa-chevron-left"></i>
-                </button>
-                <div className="blog-pagination"></div>
-                <button className="blog-slider-next slider-btn">
-                  <i className="fas fa-chevron-right"></i>
-                </button>
               </div>
             </div>
           )}
         </div>
       </div>
 
-      {/* Article Modal */}
-      {showModal && modalContent && (
-        <Modal 
-          setShowModal={setShowModal} 
-          showModal={showModal} 
-          modalContent={modalContent} 
+      {/* Modal */}
+      {showModal && (
+        <Modal
+          setShowModal={setShowModal}
+          showModal={showModal}
+          modalContent={modalContent}
         />
       )}
     </>
