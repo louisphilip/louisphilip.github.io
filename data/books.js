@@ -323,7 +323,7 @@ export const booksData = [
     id: 21,
     title: "The Comfort Crisis: Embrace Discomfort to Reclaim Your Wild, Happy, Healthy Self",
     author: "Michael Easter",
-    authorWebsite: "https://michaeleast.com",
+    authorWebsite: "https://eastermichael.com",
     coverImage: "https://covers.openlibrary.org/b/isbn/9780593138738-L.jpg",
     type: "audiobook",
     category: "Self-Development",
@@ -547,7 +547,7 @@ export const booksData = [
     id: 35,
     title: "Greenlights",
     author: "Matthew McConaughey",
-    authorWebsite: "https://www.matthewmcconaughey.com",
+    authorWebsite: "",
     coverImage: "https://covers.openlibrary.org/b/isbn/9780593139131-L.jpg",
     type: "audiobook",
     category: "Memoir",
@@ -1011,7 +1011,7 @@ export const booksData = [
     id: 64,
     title: "Outliers: The Story of Success",
     author: "Malcolm Gladwell",
-    authorWebsite: "https://gladwell.com",
+    authorWebsite: "https://www.gladwellbooks.com",
     coverImage: "https://covers.openlibrary.org/b/isbn/9780316017923-L.jpg",
     type: "audiobook",
     category: "Psychology",
@@ -1121,6 +1121,20 @@ export const booksData = [
   },
   {
     id: 71,
+    title: "The Comfort Crisis: Embrace Discomfort to Reclaim Your Wild, Happy, Healthy Self",
+    author: "Michael Easter",
+    authorWebsite: "https://eastermichael.com",
+    genre: "Health",
+    type: "Self-Help",
+    published: "2021",
+    pages: 320,
+    isbn: "9780593138762",
+    rating: 4.5,
+    coverImage: "https://images-na.ssl-images-amazon.com/images/P/B08FZLLPJX.01.L.jpg",
+    description: "Explores how our comfortable modern lives may be the root of many health and mental issues, and argues for embracing discomfort to improve our well-being."
+  },
+  {
+    id: 72,
     title: "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness",
     author: "Morgan Housel",
     authorWebsite: "https://www.collaborativefund.com",
@@ -1136,7 +1150,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Psychology-of-Money-Audiobook/B08F7RFSSYBH"
   },
   {
-    id: 72,
+    id: 73,
     title: "The Purpose Driven Life: What on Earth Am I Here For?",
     author: "Rick Warren",
     authorWebsite: "https://pastorrick.com",
@@ -1152,7 +1166,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Purpose-Driven-Life-Audiobook/B002V0KJ8I"
   },
   {
-    id: 73,
+    id: 74,
     title: "Rich Dad Advisors: Tax-Free Wealth: How to Build Massive Wealth by Permanently Lowering Your Taxes",
     author: "Tom Wheelwright",
     authorWebsite: "https://www.provisionwealth.com",
@@ -1168,7 +1182,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dad-Advisors-Tax-Free-Wealth-Audiobook/B002V0KJ8I"
   },
   {
-    id: 74,
+    id: 75,
     title: "Rich Dad Poor Dad: What the Rich Teach Their Kids About Money - That the Poor and Middle Class Do Not!",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1184,7 +1198,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dad-Poor-Dad-Audiobook/B002V0KJ8I"
   },
   {
-    id: 75,
+    id: 76,
     title: "Rich Dad's Before You Quit Your Job: 10 Real-Life Lessons Every Entrepreneur Should Know About Building a Multimillion-Dollar Business",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1200,7 +1214,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Before-You-Quit-Your-Job-Audiobook/B002V0KJ8I"
   },
   {
-    id: 76,
+    id: 77,
     title: "Rich Dad's Cashflow Quadrant Guide to Financial Freedom",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1216,7 +1230,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Cashflow-Quadrant-Audiobook/B002V0KJ8I"
   },
   {
-    id: 77,
+    id: 78,
     title: "Rich Dad's Guide to Becoming Rich Without Cutting Up Your Credit Cards: Turn Bad Debt Into Good Debt",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1232,7 +1246,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Guide-to-Becoming-Rich-Audiobook/B002V0KJ8I"
   },
   {
-    id: 78,
+    id: 79,
     title: "Rich Dad's Guide to Investing: What the Rich Invest in That the Poor and Middle Class Do Not",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1248,7 +1262,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Guide-to-Investing-Audiobook/B002V0KJ8I"
   },
   {
-    id: 79,
+    id: 80,
     title: "Rich Dad's Increase Your Financial IQ: Get Smarter with Your Money",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1264,7 +1278,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Increase-Your-Financial-IQ-Audiobook/B002V0KJ8I"
   },
   {
-    id: 80,
+    id: 81,
     title: "Rich Dad's Retire Young Retire Rich: How to Get Rich and Stay Rich",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1280,11 +1294,11 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Rich-Dads-Retire-Young-Retire-Rich-Audiobook/B002V0KJ8I"
   },
   {
-    id: 81,
+    id: 82,
     title: "The Saint, the Surfer and the CEO",
     author: "Robin Sharma",
     authorWebsite: "https://robinsharma.com",
-        coverImage: "https://covers.openlibrary.org/b/isbn/9780062515674-L.jpg",
+    coverImage: "https://covers.openlibrary.org/b/isbn/9780062515674-L.jpg",
     type: "audiobook",
     category: "Self-Development",
     description: "A fable about three teachers who help a man find meaning and purpose in his life.",
@@ -1296,7 +1310,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Saint-the-Surfer-and-the-CEO-Audiobook/B002V0KJ8I"
   },
   {
-    id: 82,
+    id: 83,
     title: "The Science of Getting Rich",
     author: "Wallace D. Wattles",
     authorWebsite: "",
@@ -1312,7 +1326,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Science-of-Getting-Rich-Audiobook/B002V0KJ8I"
   },
   {
-    id: 83,
+    id: 84,
     title: "Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth",
     author: "T. Harv Eker",
     authorWebsite: "https://www.harveker.com",
@@ -1328,7 +1342,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Secrets-of-the-Millionaire-Mind-Audiobook/B002V0KJ8I"
   },
   {
-    id: 84,
+    id: 85,
     title: "Shoe Dog: A Memoir by the Creator of Nike",
     author: "Phil Knight",
     authorWebsite: "",
@@ -1344,7 +1358,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Shoe-Dog-Audiobook/B01N0VK8I"
   },
   {
-    id: 85,
+    id: 86,
     title: "Skin in the Game: Hidden Asymmetries in Daily Life",
     author: "Nassim Nicholas Taleb",
     authorWebsite: "https://www.fooledbyrandomness.com",
@@ -1360,7 +1374,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Skin-in-the-Game-Audiobook/B07RFSSYBH"
   },
   {
-    id: 86,
+    id: 87,
     title: "Small and Mighty Real Estate Investor: How to Reach Financial Freedom with Fewer Rental Properties",
     author: "Chad Carson",
     authorWebsite: "https://www.coachcarson.com",
@@ -1376,7 +1390,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Small-and-Mighty-Real-Estate-Investor-Audiobook/B07RFSSYBH"
   },
   {
-    id: 87,
+    id: 88,
     title: "So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love",
     author: "Cal Newport",
     authorWebsite: "https://calnewport.com",
@@ -1392,7 +1406,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/So-Good-They-Cant-Ignore-You-Audiobook/B01N0VK8I"  
   },
   {
-    id: 88,
+    id: 89,
     title: "The Sovereign Individual: Mastering the Transition to the Information Age",
     author: "James Dale Davidson",
     authorWebsite: "",
@@ -1408,7 +1422,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Sovereign-Individual-Audiobook/B002V0KJ8I"
   },
   {
-    id: 89,
+    id: 90,
     title: "Start with Why: How Great Leaders Inspire Everyone to Take Action",
     author: "Simon Sinek",
     authorWebsite: "https://simonsinek.com",
@@ -1424,7 +1438,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Start-with-Why-Audiobook/B002V0KJ8I"
   },
   {
-    id: 90,
+    id: 91,
     title: "Start Your Own Corporation, 3rd Edition: Why the Rich Own Their Own Companies and Everyone Else Works for Them",
     author: "Garrett Sutton",
     authorWebsite: "https://www.corporatedirect.com",
@@ -1440,7 +1454,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Start-Your-Own-Corporation-Audiobook/B002V0KJ8I"
   },
   {
-    id: 91,
+    id: 92,
     title: "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
     author: "Mark Manson",
     authorWebsite: "https://markmanson.net",
@@ -1456,7 +1470,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Subtle-Art-of-Not-Giving-a-Fck-Audiobook/B01N0VK8I"
   },
   {
-    id: 92,
+    id: 93,
     title: "Team Topologies: Organizing Business and Technology Teams for Fast Flow",
     author: "Matthew Skelton",
     authorWebsite: "https://teamtopologies.com",
@@ -1472,7 +1486,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Team-Topologies-Audiobook/B07RFSSYBH"
   },
   {
-    id: 93,
+    id: 94,
     title: "The Real Book of Real Estate: Real Experts, Real Stories, Real Life",
     author: "Robert T. Kiyosaki",
     authorWebsite: "https://www.richdad.com",
@@ -1488,7 +1502,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Real-Book-of-Real-Estate-Audiobook/B002V0KJ8I"
   },
   {
-    id: 94,
+    id: 95,
     title: "Think and Grow Rich",
     author: "Napoleon Hill",
     authorWebsite: "",
@@ -1504,7 +1518,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Think-and-Grow-Rich-Audiobook/B002V0KJ8I"
   },
   {
-    id: 95,
+    id: 96,
     title: "Think Like a Monk: The Secret of How to Harness the Power of Positivity and Be Happy Now",
     author: "Jay Shetty",
     authorWebsite: "https://jayshetty.me",
@@ -1520,7 +1534,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Think-Like-a-Monk-Audiobook/B08F7RFSSYBH"
   },
   {
-    id: 96,
+    id: 97,
     title: "Thought It Was Just Me (but it isn't): Telling the Truth about Perfectionism, Inadequacy, and Power",
     author: "Brené Brown",
     authorWebsite: "https://brenebrown.com",
@@ -1536,7 +1550,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Thought-It-Was-Just-Me-Audiobook/B002V0KJ8I"
   },
   {
-    id: 97,
+    id: 98,
     title: "The Total Money Makeover: A Proven Plan for Financial Fitness",
     author: "Dave Ramsey",
     authorWebsite: "https://www.daveramsey.com",
@@ -1552,10 +1566,10 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Total-Money-Makeover-Audiobook/B002V0KJ8I"
   },
   {
-    id: 98,
+    id: 99,
     title: "Unf*ck Your Brain",
     author: "Faith G. Harper",
-    authorWebsite: "https://drfaithharper.com",
+    authorWebsite: "https://www.faithgharper.com",
     coverImage: "https://covers.openlibrary.org/b/isbn/9781621063044-L.jpg",
     type: "audiobook",
     category: "Psychology",
@@ -1568,7 +1582,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Unfck-Your-Brain-Audiobook/B07RFSSYBH"
   },
   {
-    id: 99,
+    id: 100,
     title: "The Untethered Soul: The Journey Beyond Yourself",
     author: "Michael A. Singer",
     authorWebsite: "https://untetheredsoul.com",
@@ -1584,7 +1598,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/The-Untethered-Soul-Audiobook/B002V0KJ8I"
   },
   {
-    id: 100,
+    id: 101,
     title: "Building a Better Vocabulary",
     author: "Kevin Flanigan",
     authorWebsite: "https://www.thegreatcourses.com",
@@ -1600,7 +1614,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Building-a-Better-Vocabulary-Audiobook/B00D8N6K8I"
   },
   {
-    id: 101,
+    id: 102,
     title: "Who Will Cry When You Die?",
     author: "Robin Sharma",
     authorWebsite: "https://robinsharma.com",
@@ -1616,7 +1630,7 @@ export const booksData = [
     audibleLink: "https://www.audible.com/pd/Who-Will-Cry-When-You-Die-Audiobook/B002V0KJ8I"
   },
   {
-    id: 102,
+    id: 103,
     title: "Why We Sleep: The New Science of Sleep and Dreams",
     author: "Matthew Walker",
     authorWebsite: "https://www.sleepdiplomat.com",
