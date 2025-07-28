@@ -1,0 +1,117 @@
+export const resourcesData = [
+  {
+    id: 1,
+    category: "Development Tools",
+    title: "VS Code Extensions",
+    description: "Essential extensions for web development",
+    link: "https://marketplace.visualstudio.com/",
+    icon: "fa-brands fa-microsoft",
+    tags: ["vscode", "development", "tools"]
+  },
+  {
+    id: 2,
+    category: "Learning Resources",
+    title: "MDN Web Docs",
+    description: "Comprehensive web development documentation",
+    link: "https://developer.mozilla.org/",
+    icon: "fa-brands fa-firefox-browser",
+    tags: ["documentation", "web", "learning"]
+  },
+  {
+    id: 3,
+    category: "Design",
+    title: "Figma",
+    description: "Collaborative interface design tool",
+    link: "https://www.figma.com/",
+    icon: "fa-brands fa-figma",
+    tags: ["design", "ui", "ux", "collaboration"]
+  },
+  {
+    id: 4,
+    category: "Development Tools",
+    title: "GitHub",
+    description: "Version control and collaboration platform",
+    link: "https://github.com/",
+    icon: "fa-brands fa-github",
+    tags: ["git", "version-control", "collaboration"]
+  },
+  {
+    id: 5,
+    category: "Learning Resources",
+    title: "freeCodeCamp",
+    description: "Learn to code with free interactive tutorials",
+    link: "https://www.freecodecamp.org/",
+    icon: "fa-solid fa-code",
+    tags: ["learning", "tutorials", "free"]
+  },
+  {
+    id: 6,
+    category: "Design",
+    title: "Dribbble",
+    description: "Discover and connect with designers worldwide",
+    link: "https://dribbble.com/",
+    icon: "fa-brands fa-dribbble",
+    tags: ["design", "inspiration", "community"]
+  },
+  {
+    id: 7,
+    category: "Development Tools",
+    title: "Stack Overflow",
+    description: "Developer community for questions and answers",
+    link: "https://stackoverflow.com/",
+    icon: "fa-brands fa-stack-overflow",
+    tags: ["q&a", "community", "development"]
+  },
+  {
+    id: 8,
+    category: "Learning Resources",
+    title: "CSS-Tricks",
+    description: "Tips, tricks, and techniques for CSS",
+    link: "https://css-tricks.com/",
+    icon: "fa-brands fa-css3-alt",
+    tags: ["css", "frontend", "tips"]
+  },
+  {
+    id: 9,
+    category: "Design",
+    title: "Behance",
+    description: "Showcase and discover creative work",
+    link: "https://www.behance.net/",
+    icon: "fa-brands fa-behance",
+    tags: ["design", "portfolio", "creative"]
+  },
+  {
+    id: 10,
+    category: "Development Tools",
+    title: "CodePen",
+    description: "Social development environment for front-end designers and developers",
+    link: "https://codepen.io/",
+    icon: "fa-brands fa-codepen",
+    tags: ["frontend", "sandbox", "community"]
+  },
+  {
+    id: 11,
+    category: "Learning Resources",
+    title: "Dev.to",
+    description: "Community of software developers",
+    link: "https://dev.to/",
+    icon: "fa-brands fa-dev",
+    tags: ["blog", "community", "development"]
+  },
+  {
+    id: 12,
+    category: "Design",
+    title: "Canva",
+    description: "Easy-to-use design tool for everyone",
+    link: "https://www.canva.com/",
+    icon: "fa-brands fa-canva",
+    tags: ["design", "easy", "templates"]
+  }
+];
+
+export const resourceCategories = [
+  "All",
+  "Development Tools",
+  "Learning Resources", 
+  "Design"
+]; 
