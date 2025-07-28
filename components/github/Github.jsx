@@ -105,11 +105,13 @@ export default function Github() {
           <div className="bostami-page-title-wrap mb-15">
             <h2 className="page-title">GitHub</h2>
           </div>
-          <div className="loading-state text-center py-60">
-            <div className="spinner-border text-primary" role="status">
+          <div className="loading-state">
+            <i className="fab fa-github"></i>
+            <h4>Loading Repositories</h4>
+            <p>Fetching the latest GitHub repositories and starred projects...</p>
+            <div className="spinner-border" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
-            <p className="mt-3">Loading GitHub repositories...</p>
           </div>
         </div>
       </div>
@@ -123,17 +125,14 @@ export default function Github() {
           <div className="bostami-page-title-wrap mb-15">
             <h2 className="page-title">GitHub</h2>
           </div>
-          <div className="error-state text-center py-60">
-            <div className="alert alert-danger" role="alert">
-              <h4 className="alert-heading">Unable to load GitHub data</h4>
-              <p>{error}</p>
-              <hr />
-              <p className="mb-0">
-                <a href="https://github.com/louisphilip" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  View on GitHub <i className="fab fa-github ms-2"></i>
-                </a>
-              </p>
-            </div>
+          <div className="error-state">
+            <i className="fas fa-exclamation-triangle"></i>
+            <h4>Unable to Load Repositories</h4>
+            <p>We're having trouble fetching GitHub data at the moment. Please try again later or visit my GitHub profile directly.</p>
+            <a href="https://github.com/louisphilip" target="_blank" rel="noopener noreferrer" className="action-btn">
+              <i className="fab fa-github"></i>
+              View on GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -146,7 +145,7 @@ export default function Github() {
         <div className="section-wrapper pl-60 pr-60 pt-60">
           <div className="bostami-page-title-wrap mb-15">
             <h2 className="page-title">GitHub</h2>
-            <p className="page-subtitle">My latest repositories and starred projects</p>
+            <p className="page-subtitle">Explore my open-source contributions and curated projects</p>
           </div>
         </div>
 
@@ -184,7 +183,7 @@ export default function Github() {
                     }}
                   >
                     <Masonry gutter="20px">
-                      {getCurrentItems().map((repo) => (
+                      {getCurrentItems().map((repo, index) => (
                         <motion.div
                           layout
                           initial={{ opacity: 0, scale: 0 }}
@@ -194,7 +193,7 @@ export default function Github() {
                           key={repo.id}
                           style={{ width: "100%" }}
                         >
-                          <div className="github-repo-card fillter-item bg-prink">
+                          <div className={`github-repo-card fillter-item ${index % 2 === 0 ? 'bg-prink' : 'bg-catkrill'}`}>
                             <div className="repo-header">
                               <h6 className="item-title">
                                 <a 
@@ -284,5 +283,4 @@ export default function Github() {
       )}
     </>
   );
-}
 }
