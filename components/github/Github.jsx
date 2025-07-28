@@ -15,8 +15,7 @@ export default function Github() {
   // Fetch repositories from GitHub API
   const fetchRepositories = async () => {
     try {
-      setLoading(true);
-      const response = await fetch('https://api.github.com/users/louisphilip-s/repos?sort=updated&per_page=50');
+      const response = await fetch('https://api.github.com/users/louisphilip/repos?sort=updated&per_page=50');
       if (!response.ok) throw new Error('Failed to fetch repositories');
       const repos = await response.json();
       
@@ -35,7 +34,7 @@ export default function Github() {
   // Fetch starred repositories
   const fetchStarredRepos = async () => {
     try {
-      const response = await fetch('https://api.github.com/users/louisphilip-s/starred?per_page=30');
+      const response = await fetch('https://api.github.com/users/louisphilip/starred?per_page=30');
       if (!response.ok) throw new Error('Failed to fetch starred repositories');
       const starred = await response.json();
       setStarredRepos(starred);
@@ -46,8 +45,15 @@ export default function Github() {
 
   useEffect(() => {
     const fetchData = async () => {
-      await Promise.all([fetchRepositories(), fetchStarredRepos()]);
-      setLoading(false);
+      setLoading(true);
+      try {
+        await Promise.all([fetchRepositories(), fetchStarredRepos()]);
+      } catch (error) {
+        console.error('Error in fetchData:', error);
+        setError('Failed to load repositories');
+      } finally {
+        setLoading(false);
+      }
     };
     fetchData();
   }, []);
