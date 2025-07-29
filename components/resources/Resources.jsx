@@ -30,15 +30,15 @@ export default function Resources() {
               fontWeight: "800",
               marginBottom: "10px"
             }}>
-              Curated Resources
+              Focused Resources
             </h2>
             <p className="text-muted" style={{
               fontSize: "1.1rem",
               color: "var(--body-text)",
-              maxWidth: "600px",
+              maxWidth: "700px",
               lineHeight: "1.6"
             }}>
-              A carefully curated collection of tools, resources, and links I find valuable for creators and developers
+              Essential resources and tools for Google Cloud, DevOps, Cloud Security, and Flutter Mobile Development - curated for professionals and enthusiasts
             </p>
           </div>
         </div>
