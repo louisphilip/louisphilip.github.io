@@ -4,9 +4,9 @@ import Header from "@/components/headers/Header";
 import PersonalInfo from "@/components/personalInfo/PersonalInfo";
 
 export const metadata = {
-  title: "Resources || LP Shahim",
+  title: "Focused Resources || LP Shahim",
   description:
-    "Curated resources and tools for creators and developers",
+    "Essential resources and tools for Google Cloud, DevOps, Cloud Security, and Flutter Mobile Development - curated for professionals and enthusiasts",
 };
 
 import React from "react";

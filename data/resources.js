@@ -1,118 +1,8 @@
 export const resourcesData = [
-  // Existing general categories
+  // Google Cloud Resources
   {
     id: 1,
-    category: "Development Tools",
-    title: "VS Code Extensions",
-    description: "Essential extensions for web development",
-    link: "https://marketplace.visualstudio.com/",
-    icon: "fa-brands fa-microsoft",
-    tags: ["vscode", "development", "tools"]
-  },
-  {
-    id: 2,
-    category: "Learning Resources",
-    title: "MDN Web Docs",
-    description: "Comprehensive web development documentation",
-    link: "https://developer.mozilla.org/",
-    icon: "fa-brands fa-firefox-browser",
-    tags: ["documentation", "web", "learning"]
-  },
-  {
-    id: 3,
-    category: "Design",
-    title: "Figma",
-    description: "Collaborative interface design tool",
-    link: "https://www.figma.com/",
-    icon: "fa-brands fa-figma",
-    tags: ["design", "ui", "ux", "collaboration"]
-  },
-  {
-    id: 4,
-    category: "Development Tools",
-    title: "GitHub",
-    description: "Version control and collaboration platform",
-    link: "https://github.com/",
-    icon: "fa-brands fa-github",
-    tags: ["git", "version-control", "collaboration"]
-  },
-  {
-    id: 5,
-    category: "Learning Resources",
-    title: "freeCodeCamp",
-    description: "Learn to code with free interactive tutorials",
-    link: "https://www.freecodecamp.org/",
-    icon: "fa-solid fa-code",
-    tags: ["learning", "tutorials", "free"]
-  },
-  {
-    id: 6,
-    category: "Design",
-    title: "Dribbble",
-    description: "Discover and connect with designers worldwide",
-    link: "https://dribbble.com/",
-    icon: "fa-brands fa-dribbble",
-    tags: ["design", "inspiration", "community"]
-  },
-  {
-    id: 7,
-    category: "Development Tools",
-    title: "Stack Overflow",
-    description: "Developer community for questions and answers",
-    link: "https://stackoverflow.com/",
-    icon: "fa-brands fa-stack-overflow",
-    tags: ["q&a", "community", "development"]
-  },
-  {
-    id: 8,
-    category: "Learning Resources",
-    title: "CSS-Tricks",
-    description: "Tips, tricks, and techniques for CSS",
-    link: "https://css-tricks.com/",
-    icon: "fa-brands fa-css3-alt",
-    tags: ["css", "frontend", "tips"]
-  },
-  {
-    id: 9,
-    category: "Design",
-    title: "Behance",
-    description: "Showcase and discover creative work",
-    link: "https://www.behance.net/",
-    icon: "fa-brands fa-behance",
-    tags: ["design", "portfolio", "creative"]
-  },
-  {
-    id: 10,
-    category: "Development Tools",
-    title: "CodePen",
-    description: "Social development environment for front-end designers and developers",
-    link: "https://codepen.io/",
-    icon: "fa-brands fa-codepen",
-    tags: ["frontend", "sandbox", "community"]
-  },
-  {
-    id: 11,
-    category: "Learning Resources",
-    title: "Dev.to",
-    description: "Community of software developers",
-    link: "https://dev.to/",
-    icon: "fa-brands fa-dev",
-    tags: ["blog", "community", "development"]
-  },
-  {
-    id: 12,
-    category: "Design",
-    title: "Canva",
-    description: "Easy-to-use design tool for everyone",
-    link: "https://www.canva.com/",
-    icon: "fa-brands fa-canva",
-    tags: ["design", "easy", "templates"]
-  },
-
-  // Google Cloud Engineers Resources
-  {
-    id: 13,
-    category: "Google Cloud Engineers",
+    category: "Google Cloud",
     title: "Google Cloud Documentation",
     description: "Official comprehensive documentation for all Google Cloud services",
     link: "https://cloud.google.com/docs",
@@ -120,8 +10,8 @@ export const resourcesData = [
     tags: ["gcp", "documentation", "cloud", "official"]
   },
   {
-    id: 14,
-    category: "Google Cloud Engineers",
+    id: 2,
+    category: "Google Cloud",
     title: "Google Cloud Skills Boost",
     description: "Hands-on labs and learning paths for Google Cloud certification",
     link: "https://www.cloudskillsboost.google/",
@@ -129,8 +19,8 @@ export const resourcesData = [
     tags: ["gcp", "certification", "labs", "training"]
   },
   {
-    id: 15,
-    category: "Google Cloud Engineers", 
+    id: 3,
+    category: "Google Cloud", 
     title: "Google Cloud Architecture Center",
     description: "Reference architectures, best practices, and guidance for cloud solutions",
     link: "https://cloud.google.com/architecture",
@@ -138,8 +28,8 @@ export const resourcesData = [
     tags: ["gcp", "architecture", "best-practices", "solutions"]
   },
   {
-    id: 16,
-    category: "Google Cloud Engineers",
+    id: 4,
+    category: "Google Cloud",
     title: "Terraform Google Cloud Provider",
     description: "Infrastructure as Code for Google Cloud using Terraform",
     link: "https://registry.terraform.io/providers/hashicorp/google/latest",
@@ -147,8 +37,8 @@ export const resourcesData = [
     tags: ["gcp", "terraform", "iac", "automation"]
   },
   {
-    id: 17,
-    category: "Google Cloud Engineers",
+    id: 5,
+    category: "Google Cloud",
     title: "GCP Professional Cloud Architect Certification",
     description: "Industry-recognized certification for cloud architects",
     link: "https://cloud.google.com/certification/cloud-architect",
@@ -156,8 +46,8 @@ export const resourcesData = [
     tags: ["gcp", "certification", "architect", "professional"]
   },
   {
-    id: 18,
-    category: "Google Cloud Engineers",
+    id: 6,
+    category: "Google Cloud",
     title: "Google Cloud CLI (gcloud)",  
     description: "Command-line interface for Google Cloud Platform",
     link: "https://cloud.google.com/sdk/gcloud",
@@ -165,8 +55,8 @@ export const resourcesData = [
     tags: ["gcp", "cli", "tools", "automation"]
   },
   {
-    id: 19,
-    category: "Google Cloud Engineers",
+    id: 7,
+    category: "Google Cloud",
     title: "Awesome Google Cloud",
     description: "Curated list of Google Cloud Platform resources and tools",
     link: "https://github.com/GoogleCloudPlatform/awesome-google-cloud",
@@ -174,129 +64,55 @@ export const resourcesData = [
     tags: ["gcp", "resources", "community", "tools"]
   },
   {
-    id: 20,
-    category: "Google Cloud Engineers",
+    id: 8,
+    category: "Google Cloud",
     title: "Google Cloud Buildpacks",
     description: "Build container images from source code without Docker",
     link: "https://cloud.google.com/docs/buildpacks",
     icon: "fa-solid fa-box",
     tags: ["gcp", "buildpacks", "containers", "deployment"]
   },
-
-  // Software Developers Resources
   {
-    id: 21,
-    category: "Software Developers",
-    title: "GitHub Copilot",
-    description: "AI-powered code completion and programming assistant",
-    link: "https://github.com/features/copilot",
-    icon: "fa-solid fa-robot",
-    tags: ["ai", "coding", "automation", "productivity"]
+    id: 9,
+    category: "Google Cloud",
+    title: "Google Cloud Security Command Center",
+    description: "Centralized security and risk management for Google Cloud",
+    link: "https://cloud.google.com/security-command-center",
+    icon: "fa-solid fa-shield-alt",
+    tags: ["gcp", "security", "monitoring", "risk-management"]
   },
   {
-    id: 22,
-    category: "Software Developers",
-    title: "Cursor IDE",
-    description: "VS Code replacement with built-in AI for code generation",
-    link: "https://cursor.sh/",
-    icon: "fa-solid fa-code",
-    tags: ["ide", "ai", "development", "productivity"]
-  },
-  {
-    id: 23,
-    category: "Software Developers",
-    title: "React Documentation",
-    description: "Official React library documentation and learning resources",
-    link: "https://react.dev/",
-    icon: "fa-brands fa-react",
-    tags: ["react", "frontend", "javascript", "documentation"]
-  },
-  {
-    id: 24,
-    category: "Software Developers",
-    title: "Next.js",
-    description: "Full-stack React framework for production applications",
-    link: "https://nextjs.org/",
-    icon: "fa-solid fa-forward",
-    tags: ["nextjs", "react", "fullstack", "framework"]
-  },
-  {
-    id: 25,
-    category: "Software Developers",
-    title: "TypeScript",
-    description: "Strongly typed programming language that builds on JavaScript",
-    link: "https://www.typescriptlang.org/",
-    icon: "fa-solid fa-code",
-    tags: ["typescript", "javascript", "programming", "types"]
-  },
-  {
-    id: 26,
-    category: "Software Developers",
-    title: "Python.org",
-    description: "Official Python programming language website and documentation",
-    link: "https://www.python.org/",
-    icon: "fa-brands fa-python",
-    tags: ["python", "programming", "documentation", "language"]
-  },
-  {
-    id: 27,
-    category: "Software Developers",
-    title: "Rust Programming Language",
-    description: "System programming language focused on safety and performance",
-    link: "https://www.rust-lang.org/",
-    icon: "fa-solid fa-gear",
-    tags: ["rust", "systems", "programming", "performance"]
-  },
-  {
-    id: 28,
-    category: "Software Developers",
-    title: "Go Programming Language",
-    description: "Open source programming language for building reliable software",
-    link: "https://golang.org/",
+    id: 10,
+    category: "Google Cloud",
+    title: "Cloud Run Documentation",
+    description: "Fully managed serverless platform for containerized applications",
+    link: "https://cloud.google.com/run/docs",
     icon: "fa-solid fa-play",
-    tags: ["go", "golang", "programming", "backend"]
+    tags: ["gcp", "serverless", "containers", "cloud-run"]
   },
   {
-    id: 29,
-    category: "Software Developers",
-    title: "System Design Primer",
-    description: "Learn how to design large-scale systems with examples",
-    link: "https://github.com/donnemartin/system-design-primer",
-    icon: "fa-solid fa-sitemap",
-    tags: ["system-design", "architecture", "scaling", "learning"]
+    id: 11,
+    category: "Google Cloud",
+    title: "Google Kubernetes Engine (GKE)",
+    description: "Managed Kubernetes service with enterprise-grade security",
+    link: "https://cloud.google.com/kubernetes-engine",
+    icon: "fa-solid fa-dharmachakra",
+    tags: ["gcp", "kubernetes", "containers", "gke"]
   },
   {
-    id: 30,
-    category: "Software Developers",
-    title: "LeetCode",
-    description: "Platform for coding interview preparation and practice",
-    link: "https://leetcode.com/",
-    icon: "fa-solid fa-code",
-    tags: ["algorithms", "interview", "practice", "coding"]
-  },
-  {
-    id: 31,
-    category: "Software Developers",
-    title: "The Odin Project",
-    description: "Free full-stack curriculum for web development",
-    link: "https://www.theodinproject.com/",
-    icon: "fa-solid fa-book",
-    tags: ["fullstack", "curriculum", "free", "web-development"]
-  },
-  {
-    id: 32,
-    category: "Software Developers",
-    title: "Svelte",
-    description: "Cybernetically enhanced web apps with compile-time optimizations",
-    link: "https://svelte.dev/",
-    icon: "fa-solid fa-fire",
-    tags: ["svelte", "frontend", "framework", "performance"]
+    id: 12,
+    category: "Google Cloud",
+    title: "BigQuery Documentation",
+    description: "Serverless, highly scalable data warehouse and analytics platform",
+    link: "https://cloud.google.com/bigquery/docs",
+    icon: "fa-solid fa-database",
+    tags: ["gcp", "bigquery", "analytics", "data-warehouse"]
   },
 
-  // DevOps Engineers Resources  
+  // DevOps Resources  
   {
-    id: 33,
-    category: "DevOps Engineers",
+    id: 13,
+    category: "DevOps",
     title: "Kubernetes Documentation",
     description: "Official Kubernetes container orchestration documentation",
     link: "https://kubernetes.io/docs/",
@@ -304,8 +120,8 @@ export const resourcesData = [
     tags: ["kubernetes", "containers", "orchestration", "k8s"]
   },
   {
-    id: 34,
-    category: "DevOps Engineers",
+    id: 14,
+    category: "DevOps",
     title: "Docker Documentation",
     description: "Official Docker containerization platform documentation",
     link: "https://docs.docker.com/",
@@ -313,8 +129,8 @@ export const resourcesData = [
     tags: ["docker", "containers", "virtualization", "deployment"]
   },
   {
-    id: 35,
-    category: "DevOps Engineers",
+    id: 15,
+    category: "DevOps",
     title: "Terraform Registry",
     description: "Infrastructure as Code providers and modules",
     link: "https://registry.terraform.io/",
@@ -322,8 +138,8 @@ export const resourcesData = [
     tags: ["terraform", "iac", "infrastructure", "automation"]
   },
   {
-    id: 36,
-    category: "DevOps Engineers",
+    id: 16,
+    category: "DevOps",
     title: "Jenkins",
     description: "Open source automation server for CI/CD pipelines",
     link: "https://www.jenkins.io/",
@@ -331,8 +147,8 @@ export const resourcesData = [
     tags: ["jenkins", "ci-cd", "automation", "pipeline"]
   },
   {
-    id: 37,
-    category: "DevOps Engineers",
+    id: 17,
+    category: "DevOps",
     title: "GitHub Actions",
     description: "Automate workflows with GitHub's CI/CD platform",
     link: "https://github.com/features/actions",
@@ -340,8 +156,8 @@ export const resourcesData = [
     tags: ["github-actions", "ci-cd", "automation", "workflows"]
   },
   {
-    id: 38,
-    category: "DevOps Engineers",
+    id: 18,
+    category: "DevOps",
     title: "Ansible Documentation",
     description: "Configuration management and automation platform",
     link: "https://docs.ansible.com/",
@@ -349,8 +165,8 @@ export const resourcesData = [
     tags: ["ansible", "configuration", "automation", "orchestration"]
   },
   {
-    id: 39,
-    category: "DevOps Engineers",
+    id: 19,
+    category: "DevOps",
     title: "Prometheus Monitoring",
     description: "Open source monitoring and alerting toolkit",
     link: "https://prometheus.io/",
@@ -358,8 +174,8 @@ export const resourcesData = [
     tags: ["prometheus", "monitoring", "metrics", "alerting"]
   },
   {
-    id: 40,
-    category: "DevOps Engineers",
+    id: 20,
+    category: "DevOps",
     title: "Grafana",
     description: "Open source analytics and interactive visualization platform",
     link: "https://grafana.com/",
@@ -367,8 +183,8 @@ export const resourcesData = [
     tags: ["grafana", "visualization", "dashboards", "monitoring"]
   },
   {
-    id: 41,
-    category: "DevOps Engineers",
+    id: 21,
+    category: "DevOps",
     title: "ArgoCD",
     description: "Declarative GitOps continuous delivery for Kubernetes",
     link: "https://argo-cd.readthedocs.io/",
@@ -376,8 +192,8 @@ export const resourcesData = [
     tags: ["argocd", "gitops", "kubernetes", "continuous-delivery"]
   },
   {
-    id: 42,
-    category: "DevOps Engineers",
+    id: 22,
+    category: "DevOps",
     title: "Helm Charts",
     description: "Package manager for Kubernetes applications",
     link: "https://helm.sh/",
@@ -385,8 +201,8 @@ export const resourcesData = [
     tags: ["helm", "kubernetes", "package-manager", "deployment"]
   },
   {
-    id: 43,
-    category: "DevOps Engineers",
+    id: 23,
+    category: "DevOps",
     title: "HashiCorp Vault",
     description: "Secrets management and data protection platform",
     link: "https://www.vaultproject.io/",
@@ -394,46 +210,37 @@ export const resourcesData = [
     tags: ["vault", "secrets", "security", "hashicorp"]
   },
   {
-    id: 44,
-    category: "DevOps Engineers",
+    id: 24,
+    category: "DevOps",
     title: "DevOps Roadmap",
     description: "Step-by-step guide to become a DevOps engineer",
     link: "https://roadmap.sh/devops",
     icon: "fa-solid fa-route",
     tags: ["roadmap", "learning", "career", "guide"]
   },
+  {
+    id: 25,
+    category: "DevOps",
+    title: "GitLab CI/CD",
+    description: "Complete DevOps platform with built-in CI/CD",
+    link: "https://docs.gitlab.com/ee/ci/",
+    icon: "fa-brands fa-gitlab",
+    tags: ["gitlab", "ci-cd", "devops", "automation"]
+  },
+  {
+    id: 26,
+    category: "DevOps",
+    title: "Istio Service Mesh",
+    description: "Connect, secure, control, and observe services",
+    link: "https://istio.io/",
+    icon: "fa-solid fa-network-wired",
+    tags: ["istio", "service-mesh", "microservices", "security"]
+  },
 
-  // Cloud Security Engineers Resources
+  // Cloud Security Resources
   {
-    id: 45,
-    category: "Cloud Security Engineers",
-    title: "AWS Security Documentation",
-    description: "Comprehensive security guidelines and best practices for AWS",
-    link: "https://docs.aws.amazon.com/security/",
-    icon: "fa-brands fa-aws",
-    tags: ["aws", "security", "cloud", "documentation"]
-  },
-  {
-    id: 46,
-    category: "Cloud Security Engineers",
-    title: "AWS Well-Architected Security Pillar",
-    description: "Security best practices for AWS Well-Architected Framework",
-    link: "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/",
-    icon: "fa-solid fa-shield-alt",
-    tags: ["aws", "security", "architecture", "best-practices"]
-  },
-  {
-    id: 47,
-    category: "Cloud Security Engineers", 
-    title: "Google Cloud Security Center",
-    description: "Centralized security and risk management for Google Cloud",
-    link: "https://cloud.google.com/security-command-center",
-    icon: "fa-brands fa-google",
-    tags: ["gcp", "security", "monitoring", "risk-management"]
-  },
-  {
-    id: 48,
-    category: "Cloud Security Engineers",
+    id: 27,
+    category: "Cloud Security",
     title: "Cloud Security Alliance (CSA)",
     description: "Global organization promoting security best practices for cloud computing",
     link: "https://cloudsecurityalliance.org/",
@@ -441,8 +248,8 @@ export const resourcesData = [
     tags: ["cloud-security", "standards", "best-practices", "alliance"]
   },
   {
-    id: 49,
-    category: "Cloud Security Engineers",
+    id: 28,
+    category: "Cloud Security",
     title: "OWASP Cloud Security",
     description: "Open Web Application Security Project cloud security resources",
     link: "https://owasp.org/www-project-cloud-security/",
@@ -450,8 +257,8 @@ export const resourcesData = [
     tags: ["owasp", "security", "cloud", "vulnerabilities"]
   },
   {
-    id: 50,
-    category: "Cloud Security Engineers",
+    id: 29,
+    category: "Cloud Security",
     title: "CloudSploit",
     description: "Open source cloud security posture management (CSPM) tool",
     link: "https://github.com/aquasecurity/cloudsploit",
@@ -459,8 +266,8 @@ export const resourcesData = [
     tags: ["security", "cspm", "scanning", "open-source"]
   },
   {
-    id: 51,
-    category: "Cloud Security Engineers",
+    id: 30,
+    category: "Cloud Security",
     title: "Scout Suite",
     description: "Multi-cloud security auditing tool for AWS, Azure, and GCP",
     link: "https://github.com/nccgroup/ScoutSuite",
@@ -468,17 +275,17 @@ export const resourcesData = [
     tags: ["security", "auditing", "multi-cloud", "assessment"]
   },
   {
-    id: 52,
-    category: "Cloud Security Engineers",
+    id: 31,
+    category: "Cloud Security",
     title: "Prowler",
-    description: "AWS security best practices assessment tool",
+    description: "AWS and multi-cloud security best practices assessment tool",
     link: "https://github.com/prowler-cloud/prowler",
     icon: "fa-solid fa-magnifying-glass",
     tags: ["aws", "security", "assessment", "compliance"]
   },
   {
-    id: 53,
-    category: "Cloud Security Engineers",
+    id: 32,
+    category: "Cloud Security",
     title: "CIS Benchmarks",
     description: "Security configuration benchmarks for cloud platforms",
     link: "https://www.cisecurity.org/cis-benchmarks",
@@ -486,8 +293,8 @@ export const resourcesData = [
     tags: ["cis", "benchmarks", "security", "compliance"]
   },
   {
-    id: 54,
-    category: "Cloud Security Engineers",
+    id: 33,
+    category: "Cloud Security",
     title: "NIST Cybersecurity Framework",
     description: "Framework for improving critical infrastructure cybersecurity",
     link: "https://www.nist.gov/cyberframework",
@@ -495,8 +302,8 @@ export const resourcesData = [
     tags: ["nist", "cybersecurity", "framework", "standards"]
   },
   {
-    id: 55,
-    category: "Cloud Security Engineers",
+    id: 34,
+    category: "Cloud Security",
     title: "Zero Trust Architecture Guide",
     description: "NIST Special Publication on Zero Trust Architecture",
     link: "https://csrc.nist.gov/publications/detail/sp/800-207/final",
@@ -504,23 +311,193 @@ export const resourcesData = [
     tags: ["zero-trust", "architecture", "security", "nist"]
   },
   {
-    id: 56,
-    category: "Cloud Security Engineers",
-    title: "AWS IAM Policy Simulator",
-    description: "Test and troubleshoot IAM policies in AWS",
-    link: "https://policysim.aws.amazon.com/",
-    icon: "fa-solid fa-flask",
-    tags: ["aws", "iam", "policies", "testing"]
+    id: 35,
+    category: "Cloud Security",
+    title: "Falco Runtime Security",
+    description: "Cloud-native runtime security for threat detection",
+    link: "https://falco.org/",
+    icon: "fa-solid fa-eye",
+    tags: ["falco", "runtime-security", "threat-detection", "kubernetes"]
+  },
+  {
+    id: 36,
+    category: "Cloud Security",
+    title: "Open Policy Agent (OPA)",
+    description: "Policy-based control for cloud native environments",
+    link: "https://www.openpolicyagent.org/",
+    icon: "fa-solid fa-gavel",
+    tags: ["opa", "policy", "security", "compliance"]
+  },
+  {
+    id: 37,
+    category: "Cloud Security",
+    title: "Checkov Static Code Analysis",
+    description: "Static code analysis tool for infrastructure as code security",
+    link: "https://www.checkov.io/",
+    icon: "fa-solid fa-code",
+    tags: ["checkov", "static-analysis", "iac", "security"]
+  },
+  {
+    id: 38,
+    category: "Cloud Security",
+    title: "Trivy Vulnerability Scanner",
+    description: "Comprehensive vulnerability scanner for containers and infrastructure",
+    link: "https://trivy.dev/",
+    icon: "fa-solid fa-scanner",
+    tags: ["trivy", "vulnerability", "scanner", "containers"]
+  },
+
+  // Flutter Mobile Development Resources
+  {
+    id: 39,
+    category: "Flutter Mobile Development",
+    title: "Flutter Official Documentation",
+    description: "Complete guide to building apps with Google's UI toolkit",
+    link: "https://flutter.dev/docs",
+    icon: "fa-solid fa-mobile-alt",
+    tags: ["flutter", "mobile", "documentation", "ui"]
+  },
+  {
+    id: 40,
+    category: "Flutter Mobile Development",
+    title: "Dart Programming Language",
+    description: "Official Dart language documentation and resources",
+    link: "https://dart.dev/",
+    icon: "fa-solid fa-code",
+    tags: ["dart", "programming", "language", "flutter"]
+  },
+  {
+    id: 41,
+    category: "Flutter Mobile Development",
+    title: "Pub.dev - Flutter Packages",
+    description: "Official package repository for Dart and Flutter",
+    link: "https://pub.dev/",
+    icon: "fa-solid fa-cube",
+    tags: ["packages", "pub", "flutter", "dart"]
+  },
+  {
+    id: 42,
+    category: "Flutter Mobile Development",
+    title: "Flutter Widget Catalog",
+    description: "Comprehensive catalog of Flutter widgets and examples",
+    link: "https://flutter.dev/docs/development/ui/widgets",
+    icon: "fa-solid fa-th-large",
+    tags: ["widgets", "ui", "components", "flutter"]
+  },
+  {
+    id: 43,
+    category: "Flutter Mobile Development",
+    title: "Flutter Cookbook",
+    description: "Solutions to common Flutter development problems",
+    link: "https://flutter.dev/docs/cookbook",
+    icon: "fa-solid fa-book",
+    tags: ["cookbook", "examples", "solutions", "flutter"]
+  },
+  {
+    id: 44,
+    category: "Flutter Mobile Development",
+    title: "Firebase for Flutter",
+    description: "Google's mobile platform integration with Flutter",
+    link: "https://firebase.flutter.dev/",
+    icon: "fa-solid fa-fire",
+    tags: ["firebase", "backend", "flutter", "google"]
+  },
+  {
+    id: 45,
+    category: "Flutter Mobile Development",
+    title: "Flutter State Management",
+    description: "Guide to state management patterns in Flutter",
+    link: "https://flutter.dev/docs/development/data-and-backend/state-mgmt",
+    icon: "fa-solid fa-sitemap",
+    tags: ["state-management", "architecture", "flutter", "patterns"]
+  },
+  {
+    id: 46,
+    category: "Flutter Mobile Development",
+    title: "Flutter Performance Best Practices",
+    description: "Optimization techniques for Flutter applications",
+    link: "https://flutter.dev/docs/perf/best-practices",
+    icon: "fa-solid fa-tachometer-alt",
+    tags: ["performance", "optimization", "best-practices", "flutter"]
+  },
+  {
+    id: 47,
+    category: "Flutter Mobile Development",
+    title: "GetX Flutter Package",
+    description: "High-performance state management and dependency injection",
+    link: "https://pub.dev/packages/get",
+    icon: "fa-solid fa-rocket",
+    tags: ["getx", "state-management", "navigation", "flutter"]
+  },
+  {
+    id: 48,
+    category: "Flutter Mobile Development",
+    title: "Provider State Management",
+    description: "Recommended state management solution for Flutter",
+    link: "https://pub.dev/packages/provider",
+    icon: "fa-solid fa-share-alt",
+    tags: ["provider", "state-management", "flutter", "recommended"]
+  },
+  {
+    id: 49,
+    category: "Flutter Mobile Development",
+    title: "Flutter Testing Guide",
+    description: "Complete guide to testing Flutter applications",
+    link: "https://flutter.dev/docs/testing",
+    icon: "fa-solid fa-vial",
+    tags: ["testing", "unit-tests", "integration", "flutter"]
+  },
+  {
+    id: 50,
+    category: "Flutter Mobile Development",
+    title: "Awesome Flutter",
+    description: "Curated list of Flutter resources, plugins, and examples",
+    link: "https://github.com/Solido/awesome-flutter",
+    icon: "fa-brands fa-github",
+    tags: ["awesome", "resources", "community", "flutter"]
+  },
+  {
+    id: 51,
+    category: "Flutter Mobile Development",
+    title: "Flutter DevTools",
+    description: "Suite of debugging and performance tools for Flutter",
+    link: "https://flutter.dev/docs/development/tools/devtools",
+    icon: "fa-solid fa-tools",
+    tags: ["devtools", "debugging", "performance", "flutter"]
+  },
+  {
+    id: 52,
+    category: "Flutter Mobile Development",
+    title: "Flutter Animation Guide",
+    description: "Comprehensive guide to animations in Flutter",
+    link: "https://flutter.dev/docs/development/ui/animations",
+    icon: "fa-solid fa-play-circle",
+    tags: ["animations", "ui", "effects", "flutter"]
+  },
+  {
+    id: 53,
+    category: "Flutter Mobile Development",
+    title: "Flutter Web Support",
+    description: "Build web applications with Flutter framework",
+    link: "https://flutter.dev/web",
+    icon: "fa-solid fa-globe",
+    tags: ["web", "cross-platform", "flutter", "responsive"]
+  },
+  {
+    id: 54,
+    category: "Flutter Mobile Development",
+    title: "Flutter Desktop Support",
+    description: "Build desktop applications with Flutter",
+    link: "https://flutter.dev/desktop",
+    icon: "fa-solid fa-desktop",
+    tags: ["desktop", "cross-platform", "flutter", "native"]
   }
 ];
 
 export const resourceCategories = [
   "All",
-  "Development Tools",
-  "Learning Resources", 
-  "Design",
-  "Google Cloud Engineers",
-  "Software Developers",
-  "DevOps Engineers", 
-  "Cloud Security Engineers"
+  "Google Cloud",
+  "DevOps", 
+  "Cloud Security",
+  "Flutter Mobile Development"
 ]; 
