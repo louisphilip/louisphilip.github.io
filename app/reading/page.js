@@ -1,4 +1,4 @@
-import BookCard from "@/components/reading/BookCard";
+import ReadingList from "@/components/reading/ReadingList";
 import { booksData } from "@/data/books";
 import styles from "@/components/reading/Reading.module.scss";
 
@@ -18,11 +18,7 @@ export default function Reading() {
                 </p>
             </div>
 
-            <div className={styles.grid}>
-                {booksData.map((book) => (
-                    <BookCard key={book.id} book={book} />
-                ))}
-            </div>
+            <ReadingList books={booksData} />
         </div>
     );
 }

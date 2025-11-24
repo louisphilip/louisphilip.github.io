@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FiHeadphones, FiStar } from "react-icons/fi";
 import styles from "./Reading.module.scss";
 
-export default function BookCard({ book }) {
+export default function BookCard({ book, priority = false }) {
     return (
         <motion.div
             className={styles.flipContainer}
@@ -21,6 +21,7 @@ export default function BookCard({ book }) {
                             src={book.coverImage}
                             alt={book.title}
                             fill
+                            priority={priority}
                             className={styles.image}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
