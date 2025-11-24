@@ -1,0 +1,128 @@
+@import '../../styles/mixins';
+
+.sectionTitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--primary-color);
+        border-radius: 2px;
+    }
+}
+
+/* Experience Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid var(--border-color);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.timelineDot {
+    position: absolute;
+    left: -36px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 2px solid var(--bg-dark);
+    box-shadow: 0 0 0 4px rgba(0, 171, 108, 0.2);
+}
+
+.timelineContent {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+
+    &:hover {
+        transform: translateX(5px);
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+.session {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.role {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.company {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* Skills Grid */
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skillItem {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.skillHeader {
+    @include flex-between;
+    margin-bottom: 15px;
+}
+
+.skillTitle {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.skillPercent {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.progressBarBg {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressBarFill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}

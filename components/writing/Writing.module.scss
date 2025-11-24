@@ -1,0 +1,112 @@
+@import '../../styles/mixins';
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: box-shadow var(--transition-normal);
+    height: 100%;
+
+    &:hover {
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary-color);
+
+        .readMore {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: var(--bg-card-hover);
+}
+
+.image {
+    object-fit: cover;
+}
+
+.placeholder {
+    width: 100%;
+    height: 100%;
+    @include flex-center;
+    background: var(--bg-card-hover);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.meta {
+    @include flex-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+}
+
+.category {
+    background: rgba(0, 171, 108, 0.1);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.readMore {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color var(--transition-fast);
+}
