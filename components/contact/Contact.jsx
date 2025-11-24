@@ -1,30 +1,31 @@
+"use client";
 
-
-import ContactForm from "./ContactForm";
+import { motion } from "framer-motion";
+import { contactData } from "../../data/contactData";
+import styles from "./Contact.module.scss";
 
 export default function Contact() {
- 
-  return (
-    <div className="bostami-page-content-wrap">
-      <div className="section-wrapper pl-60 pr-60 pt-60">
-        <div className="bostami-page-title-wrap mb-15">
-          <h2 className="page-title">contact</h2>
+    return (
+        <div className={styles.grid}>
+            {contactData.map((item, index) => (
+                <motion.div
+                    key={item.id}
+                    className={styles.card}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    style={{ borderColor: item.color }}
+                >
+                    <div className={styles.iconWrapper} style={{ color: item.color }}>
+                        <i className={item.iconClass}></i>
+                    </div>
+                    <div className={styles.content}>
+                        <span className={styles.label}>{item.text.label}</span>
+                        <h4 className={styles.value}>{item.text.value}</h4>
+                    </div>
+                </motion.div>
+            ))}
         </div>
-      </div>
-
-      <div className="section-wrapper pr-60 pl-60 mb-60">
-        <div className="contact-area bg-light-white-2">
-          <h5 className="contact-title">I'm always open to discussing opportunities for</h5>
-          <h5 className="contact-title-b">work or partnerships.</h5>
-          <ContactForm/>
-        </div>
-      </div>
-
-      <div className="footer-copyright text-center bg-light-white-2 pt-25 pb-25">
-        <span>
-          © {new Date().getFullYear()} All Rights Reserved by LP Shahim.
-        </span>
-      </div>
-    </div>
-  );
+    );
 }

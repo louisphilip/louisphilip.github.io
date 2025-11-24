@@ -1,0 +1,149 @@
+@import '../../styles/mixins';
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 40px;
+
+    @include mobile {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 20px;
+    }
+}
+
+.flipContainer {
+    background: transparent;
+    width: 100%;
+    aspect-ratio: 2/3;
+    perspective: 1000px;
+    cursor: pointer;
+
+    &:hover .flipper {
+        transform: rotateY(180deg);
+    }
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.front {
+    background: var(--bg-card);
+}
+
+.back {
+    background: var(--bg-card);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    background: rgba(20, 20, 20, 0.95); // Darker background for readability
+    backdrop-filter: blur(10px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.author {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+// Back face styles
+.synopsis {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 15px;
+
+    /* Custom scrollbar for synopsis */
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 2px;
+    }
+}
+
+.backTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.actions {
+    margin-top: auto;
+}
+
+.listenBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background var(--transition-fast);
+
+    &:hover {
+        background: var(--primary-hover);
+    }
+}
