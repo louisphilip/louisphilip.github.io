@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-    <img width=200px height=200px src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Daily Changing GIF">
+    <img width="200px" height="200px" src="https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif" alt="Daily Changing GIF" id="daily-gif">
   </a>
 </p>
 
@@ -8,9 +8,12 @@
 
 <div align="center">
 
-[![Deploy](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml)
-[![Lighthouse](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml)
-[![Release](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml)
+| Status | Badge |
+| :--- | :--- |
+| **Deploy** | [![Deploy](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml) |
+| **Lighthouse** | [![Lighthouse](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml) |
+| **Release** | [![Release](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml) |
+| **Daily Vibes** | [![Daily README Update](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/daily-readme.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/daily-readme.yml) |
 
 </div>
 
@@ -18,24 +21,25 @@
 
 ## ✨ What's Happening Here?
 
-Welcome to my digital playground! This portfolio is where tech wizardry meets creativity, giving you a peek into my world of code, projects, and techy goodness. Whether you’re here to check out my work, share ideas, or just curious about what I do, you’re in the right place!
+**Welcome to my digital playground!** 🎢 This isn't just a portfolio; it's a living, breathing experiment where tech wizardry meets creative chaos.
 
-You’ll find a collection of my projects, and every day there’s something new – even the picture! (It's a GIF that magically changes daily. 🧙‍♂️✨)
+Here you'll find a collection of my projects, experiments, and techy goodness. Whether you’re here to check out my work, share ideas, or just curious about what I do, you’re in the right place!
+
+### 🧙‍♂️ Daily Magic
+Notice the GIF above? It changes **every single day**! I've set up a GitHub Action to sprinkle a little bit of randomness into this repo daily. Because why have a static README when you can have a party? 🎉
 
 ---
 
 ## 🌟 Let’s Connect!
 
-I love geeking out over new ideas, connecting with fellow devs, or simply chatting about the latest tech trends. Let’s stay in touch! You can find me here:
+I love geeking out over new ideas, connecting with fellow devs, or simply chatting about the latest tech trends. Let’s stay in touch!
 
-- [Email](mailto:me@louisphilipshahim.com) – Drop me a line!
-- [LinkedIn](https://www.linkedin.com/in/louisphilip-shahim/) – Let’s network!
-- [GitHub](https://github.com/louisphilip) – You’re already here, aren’t you?
-
----
-
-This portfolio is my living, breathing side project, constantly evolving with new content and features. Stay tuned for exciting updates – there's always something in the works! 🚧💡
+- 📧 **[Email](mailto:me@louisphilipshahim.com)** – Drop me a line!
+- 💼 **[LinkedIn](https://www.linkedin.com/in/louisphilip/)** – Let’s network!
+- 🐙 **[GitHub](https://github.com/louisphilip)** – You’re already here, aren’t you?
 
 ---
 
-Enjoy your stay and come back soon!
+This portfolio is my side project, constantly evolving with new content and features. Stay tuned for exciting updates – there's always something in the works! 🚧💡
+
+**Enjoy your stay and come back tomorrow for a new GIF!** 👋

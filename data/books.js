@@ -1124,7 +1124,7 @@ export const booksData = [
     title: "The Comfort Crisis: Embrace Discomfort to Reclaim Your Wild, Happy, Healthy Self",
     author: "Michael Easter",
     authorWebsite: "https://eastermichael.com",
-    genre: "Health",
+    category: "Health",
     type: "Self-Help",
     published: "2021",
     pages: 320,
@@ -1403,7 +1403,7 @@ export const booksData = [
     isbn: "978-1455509126",
     tags: ["skills", "passion", "career", "work"],
     amazonLink: "https://www.amazon.com/Good-They-Cant-Ignore-You/dp/1455509124",
-    audibleLink: "https://www.audible.com/pd/So-Good-They-Cant-Ignore-You-Audiobook/B01N0VK8I"  
+    audibleLink: "https://www.audible.com/pd/So-Good-They-Cant-Ignore-You-Audiobook/B01N0VK8I"
   },
   {
     id: 89,
@@ -1650,7 +1650,7 @@ export const booksData = [
 export const bookCategories = [
   "All",
   "Business",
-  "Self-Development", 
+  "Self-Development",
   "Real Estate",
   "Psychology",
   "Memoir",
