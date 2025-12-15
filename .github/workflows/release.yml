@@ -13,7 +13,34 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        ref: main
+
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v4
+      id: semantic
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update README badge
+      if: steps.semantic.outputs.new_release_published == 'true'
+      run: |
+        TAG_NAME="${{ steps.semantic.outputs.new_release_git_tag }}"
+        echo "Updating badge to version: $TAG_NAME"
+        sed -i -E "s/release-[a-zA-Z0-9.-]+-blue/release-${TAG_NAME}-blue/" README.md
+
+    - name: Commit and push changes
+      if: steps.semantic.outputs.new_release_published == 'true'
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        git pull origin main --rebase
+        
+        if [[ -n $(git status -s) ]]; then
+          git add README.md
+          git commit -m "docs: update release badge to ${{ steps.semantic.outputs.new_release_git_tag }} [skip ci]"
+          git push
+        else
+          echo "No changes to commit"
+        fi

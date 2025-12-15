@@ -13,6 +13,7 @@
 | **Deploy** | [![Deploy](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/nextjs.yml) |
 | **Lighthouse** | [![Lighthouse](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/lighthouse.yml) |
 | **Release** | [![Release](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/release.yml) |
+| **Version** | ![Version](https://img.shields.io/badge/release-v0.0.0-blue) |
 | **Daily Vibes** | [![Daily README Update](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/daily-readme.yml/badge.svg)](https://github.com/louisphilip/louisphilip.github.io/actions/workflows/daily-readme.yml) |
 
 </div>
