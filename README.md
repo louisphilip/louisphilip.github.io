@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-    <img width="200px" height="200px" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Daily Changing GIF" id="daily-gif">
+    <img width="200px" height="200px" src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" alt="Daily Changing GIF" id="daily-gif">
   </a>
 </p>
 
