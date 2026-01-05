@@ -24,7 +24,7 @@ jobs:
         run: node scripts/update-readme.js
 
       - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "🤖 Daily README update: New GIF deployed!"
           branch: main
