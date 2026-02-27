@@ -15,11 +15,12 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
+    "sanitize-html": "^2.17.0",
     "sass": "^1.97.2",
-    "swiper": "^12.0.3",
-    "sanitize-html": "^2.17.0"
+    "swiper": "^12.0.3"
   },
   "devDependencies": {
+    "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1"
   }

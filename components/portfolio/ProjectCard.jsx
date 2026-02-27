@@ -1,16 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { FiGithub, FiStar, FiGitBranch, FiExternalLink } from "react-icons/fi";
 import styles from "./Portfolio.module.scss";
 
 export default function ProjectCard({ project }) {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.2 1"]
+    });
+    
+    const yTransform = useTransform(scrollYProgress, [0, 1], [50, 0]);
+    const opacityTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
     return (
         <motion.div
+            ref={ref}
             className={styles.card}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            style={{ y: yTransform, opacity: opacityTransform }}
+            whileHover={{ y: -5 }}
         >
             <div className={styles.cardHeader}>
                 <div className={styles.folderIcon}>

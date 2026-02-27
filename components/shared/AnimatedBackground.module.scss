@@ -1,0 +1,43 @@
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob1,
+.blob2,
+.blob3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.blob1 {
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--primary-color);
+}
+
+.blob2 {
+  bottom: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: #2dd4bf; /* Teal color matching our gradient */
+}
+
+.blob3 {
+  top: 40%;
+  left: 40%;
+  width: 500px;
+  height: 500px;
+  background: var(--secondary-color);
+}
