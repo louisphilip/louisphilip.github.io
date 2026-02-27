@@ -1,4 +1,4 @@
-@import '../../styles/mixins';
+@use '../../styles/mixins' as *;
 
 .hero {
     min-height: 100vh;
@@ -15,7 +15,7 @@
         right: -10%;
         width: 600px;
         height: 600px;
-        background: radial-gradient(circle, rgba(0, 171, 108, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
         border-radius: 50%;
         z-index: -1;
     }
@@ -162,22 +162,31 @@
     opacity: 0.3;
     z-index: 1;
     border-radius: 50%;
-    animation: pulse 4s infinite ease-in-out;
+    animation: blob-morph 8s infinite ease-in-out;
 }
 
-@keyframes pulse {
+@keyframes blob-morph {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        border-radius: 50%;
         opacity: 0.3;
     }
 
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
+    33% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(120deg);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         opacity: 0.4;
     }
 
+    66% {
+        transform: translate(-50%, -50%) scale(0.95) rotate(240deg);
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        opacity: 0.35;
+    }
+
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1) rotate(360deg);
+        border-radius: 50%;
         opacity: 0.3;
     }
 }
