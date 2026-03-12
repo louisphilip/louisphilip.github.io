@@ -1,0 +1,50 @@
+name: "Feature Pitch (Shape Up)"
+description: "Pitch a new feature or improvement following the Shape Up methodology."
+title: "[Pitch] "
+labels: ["pitch", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for proposing a new feature! Please fill out the sections below following the [Shape Up methodology](https://basecamp.com/shapeup/1.5-chapter-06)."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is the raw idea, use case, or problem that motivates us to work on this?
+      placeholder: Describe the problem...
+    validations:
+      required: true
+  - type: dropdown
+    id: appetite
+    attributes:
+      label: Appetite
+      description: How much time do we want to spend? This constrains the solution.
+      options:
+        - Small batch (1-2 weeks)
+        - Big batch (4-6 weeks)
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution
+      description: What are the core elements of the solution? Present this in a form that's easy to understand (fat marker sketches are great!).
+      placeholder: Describe the core idea...
+    validations:
+      required: true
+  - type: textarea
+    id: rabbit-holes
+    attributes:
+      label: Rabbit holes
+      description: What are the risks, technical unknowns, or details worth calling out to avoid getting stuck?
+      placeholder: Describe potential rabbit holes...
+    validations:
+      required: false
+  - type: textarea
+    id: no-gos
+    attributes:
+      label: No-gos
+      description: What is specifically excluded from this concept? What are we intentionally NOT covering to keep the problem tractable?
+      placeholder: Describe out-of-scope items...
+    validations:
+      required: false
