@@ -1,15 +1,11 @@
-import ArticleCard from "@/components/writing/ArticleCard";
-import { fetchMediumArticles } from "@/lib/medium";
-import styles from "@/components/writing/Writing.module.scss";
+import WritingContent from "@/components/writing/WritingContent";
 
 export const metadata = {
     title: "Writing | Louis Philip",
     description: "Thoughts on software engineering, cloud architecture, and more.",
 };
 
-export default async function Writing() {
-    const articles = await fetchMediumArticles();
-
+export default function Writing() {
     return (
         <div className="container section">
             <div style={{ marginBottom: '60px' }}>
@@ -20,11 +16,7 @@ export default async function Writing() {
                 </p>
             </div>
 
-            <div className={styles.grid}>
-                {articles.map((article) => (
-                    <ArticleCard key={article.id} article={article} />
-                ))}
-            </div>
+            <WritingContent />
         </div>
     );
 }

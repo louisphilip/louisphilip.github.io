@@ -110,3 +110,37 @@
     color: var(--text-primary);
     transition: color var(--transition-fast);
 }
+
+@keyframes shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.skeleton {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.skeletonImage {
+    height: 200px;
+    background: linear-gradient(90deg, var(--bg-card-hover) 25%, var(--border-color) 50%, var(--bg-card-hover) 75%);
+    background-size: 800px 200px;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.skeletonContent {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeletonLine {
+    height: 16px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--bg-card-hover) 25%, var(--border-color) 50%, var(--bg-card-hover) 75%);
+    background-size: 800px 16px;
+    animation: shimmer 1.5s infinite linear;
+}
