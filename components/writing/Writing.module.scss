@@ -110,3 +110,36 @@
     color: var(--text-primary);
     transition: color var(--transition-fast);
 }
+
+.skeleton {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.skeletonImage {
+    height: 200px;
+    width: 100%;
+    background: var(--bg-card-hover);
+    animation: shimmer 1.5s infinite;
+}
+
+.skeletonContent {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeletonLine {
+    height: 16px;
+    border-radius: 4px;
+    background: var(--bg-card-hover);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
