@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import DOMPurify from "dompurify";
 import ArticleCard from "./ArticleCard";
 import styles from "./Writing.module.scss";
 
@@ -15,15 +16,13 @@ function extractImage(content) {
 
 function cleanDescription(html) {
     if (!html) return "";
-    const text = html.replace(/<[^>]*>/g, "");
-    const decoded = text
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#039;/g, "'")
-        .replace(/&nbsp;/g, " ");
-    return decoded.length > 150 ? decoded.substring(0, 150) + "..." : decoded;
+    const sanitizedText = DOMPurify.sanitize(html, {
+        ALLOWED_TAGS: [],
+        ALLOWED_ATTR: [],
+    });
+    return sanitizedText.length > 150
+        ? sanitizedText.substring(0, 150) + "..."
+        : sanitizedText;
 }
 
 export default function WritingContent() {
