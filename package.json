@@ -23,7 +23,7 @@
   "devDependencies": {
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9",
-    "eslint-config-next": "16.1.1"
+    "eslint-config-next": "16.2.6"
   },
   "overrides": {
     "eslint": {
