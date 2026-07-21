@@ -16,6 +16,7 @@ const navItems = [
     { name: "Writing", path: "/writing" },
     { name: "Reading", path: "/reading" },
     { name: "Portfolio", path: "/portfolio" },
+    { name: "GCP Study Labs", path: "/gcp-study-guides" },
     { name: "Contact", path: "/contact" },
 ];
 
