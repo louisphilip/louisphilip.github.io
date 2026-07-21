@@ -16,6 +16,7 @@ const navItems = [
     { name: "Writing", path: "/writing" },
     { name: "Reading", path: "/reading" },
     { name: "Portfolio", path: "/portfolio" },
+    { name: "GCP PDE Guide", path: "/gcp-pde-study-guide/", external: true },
     { name: "Contact", path: "/contact" },
 ];
 
@@ -106,14 +107,26 @@ export default function Header() {
                     >
                         <div className={`container ${styles.mobileContainer}`}>
                             {navItems.map((item) => (
-                                <Link
-                                    key={item.path}
-                                    href={item.path}
-                                    className={`${styles.mobileLink} ${pathname === item.path ? styles.active : ""
-                                        }`}
-                                >
-                                    {item.name}
-                                </Link>
+                                item.external ? (
+                                    <a
+                                        key={item.name}
+                                        href={item.path}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.mobileLink}
+                                    >
+                                        {item.name}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        key={item.path}
+                                        href={item.path}
+                                        className={`${styles.mobileLink} ${pathname === item.path ? styles.active : ""
+                                            }`}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                )
                             ))}
                             <div className={styles.mobileSocials}>
                                 <a href={profileInfo.socials.github} target="_blank" rel="noopener noreferrer">
