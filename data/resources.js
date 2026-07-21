@@ -108,6 +108,15 @@ export const resourcesData = [
     icon: "fa-solid fa-database",
     tags: ["gcp", "bigquery", "analytics", "data-warehouse"]
   },
+  {
+    id: 55,
+    category: "Google Cloud",
+    title: "GCP Professional Data Engineer Study Guide App",
+    description: "An interactive study guide with Priyanka's visual sketchnotes, case studies, hands-on lab checklist, dynamic design decision wizards, and a 30-question simulated practice exam.",
+    link: "/gcp-pde-study-guide/",
+    icon: "fa-solid fa-graduation-cap",
+    tags: ["gcp", "certification", "data-engineer", "study-guide", "interactive"]
+  },
 
   // DevOps Resources  
   {

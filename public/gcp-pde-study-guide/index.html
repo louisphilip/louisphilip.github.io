@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Professional Data Engineer — Interactive Study Platform</title>
+    <!-- Modern Typography: Outfit & Inter from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons via UNPKG -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i data-lucide="cloud-lightning"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Antigravity</h1>
+                    <p>GCP PDE Study Lab</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <button class="nav-item active" data-target="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-target="sketchnotes">
+                    <i data-lucide="image"></i>
+                    <span>Visual Sketchnotes</span>
+                </button>
+                <button class="nav-item" data-target="decision-trees">
+                    <i data-lucide="git-branch"></i>
+                    <span>Decision Trees</span>
+                </button>
+                <button class="nav-item" data-target="quiz">
+                    <i data-lucide="award"></i>
+                    <span>Interactive Exam</span>
+                </button>
+                <button class="nav-item" data-target="progress">
+                    <i data-lucide="check-square"></i>
+                    <span>Study Progress</span>
+                </button>
+                <button class="nav-item" data-target="official-prep">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>Official Prep & Cases</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="architect-profile">
+                    <div class="avatar">
+                        <i data-lucide="user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h4>LP</h4>
+                        <p>Cloud Architect</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="global-search" placeholder="Search products, concepts, or exam topics...">
+                </div>
+                <div class="header-actions">
+                    <div class="badge pde-status">
+                        <span class="pulse-dot"></span>
+                        GCP PDE Exam Mode
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                
+                <!-- SECTION: DASHBOARD -->
+                <section id="dashboard" class="tab-content active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h2>Welcome, LP! 🚀</h2>
+                            <p>Let's fast-track your Google Cloud Professional Data Engineer certification. This system bridges highly-technical design logic with Priyanka Vergadia's conceptual visual sketchnotes.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <div class="stat-data">
+                                <h3 id="viewed-count">0 / 10</h3>
+                                <p>Sketchnotes Explored</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div class="stat-data">
+                                <h3 id="quiz-high-score">0%</h3>
+                                <p>Best Exam Score</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i data-lucide="activity"></i>
+                            </div>
+                            <div class="stat-data">
+                                <h3 id="study-streak">Active</h3>
+                                <p>Preparation Status</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-split">
+                        <div class="info-pane">
+                            <h3><i data-lucide="help-circle"></i> Exam Objectives Overview</h3>
+                            <ul class="blueprint-list">
+                                <li>
+                                    <div class="bp-icon"><i data-lucide="database"></i></div>
+                                    <div class="bp-text">
+                                        <h4>Domain 1: Designing Data Processing Systems</h4>
+                                        <p>Storage selections, pipelines, batch vs streaming design.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bp-icon"><i data-lucide="sliders"></i></div>
+                                    <div class="bp-text">
+                                        <h4>Domain 2: Building & Operationalizing Pipelines</h4>
+                                        <p>Dataflow logic, Dataproc, orchestration with Cloud Composer.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bp-icon"><i data-lucide="cpu"></i></div>
+                                    <div class="bp-text">
+                                        <h4>Domain 3: Operationalizing Machine Learning</h4>
+                                        <p>BQML, Vertex AI pipelines, feature store, preprocessing.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bp-icon"><i data-lucide="shield-check"></i></div>
+                                    <div class="bp-text">
+                                        <h4>Domain 4: Security, Compliance & Governance</h4>
+                                        <p>VPC-SC, CMEK, IAM, column-level security, Cloud DLP, Dataplex.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <h3><i data-lucide="book-open"></i> Fast Study Guide</h3>
+                            <div class="guide-quick-links">
+                                <div class="quick-link-card" id="btn-quick-pubsub">
+                                    <div class="ql-header">
+                                        <span class="tag tag-ingest">INGESTION</span>
+                                        <h5>Cloud Pub/Sub</h5>
+                                    </div>
+                                    <p>Decoupled async pipelines, ordering keys, push vs pull.</p>
+                                </div>
+                                <div class="quick-link-card" id="btn-quick-dataflow">
+                                    <div class="ql-header">
+                                        <span class="tag tag-process">PROCESS</span>
+                                        <h5>Cloud Dataflow</h5>
+                                    </div>
+                                    <p>Apache Beam streaming, fixed/sliding/session windows.</p>
+                                </div>
+                                <div class="quick-link-card" id="btn-quick-bigquery">
+                                    <div class="ql-header">
+                                        <span class="tag tag-store">STORE</span>
+                                        <h5>BigQuery</h5>
+                                    </div>
+                                    <p>Partitioning, clustering, slots, federated query optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION: SKETCHNOTES -->
+                <section id="sketchnotes" class="tab-content">
+                    <div class="section-header">
+                        <h2>Priyanka Vergadia Visual Sketchnotes 🎨</h2>
+                        <p>Click on any product to study its core concept, technical blueprints, and direct exam trap-gotchas.</p>
+                    </div>
+
+                    <div class="sketchnote-grid" id="sketchnote-cards-container">
+                        <!-- Populated by app.js -->
+                    </div>
+                </section>
+
+                <!-- SECTION: DECISION TREES -->
+                <section id="decision-trees" class="tab-content">
+                    <div class="section-header">
+                        <h2>GCP Architectural Decision Trees 🌲</h2>
+                        <p>Direct selector strategies engineered after standard certification questions. Follow the branches to choose correct products.</p>
+                    </div>
+
+                    <div class="wizard-selector">
+                        <button class="wizard-selector-btn active" id="btn-select-storage-wizard">
+                            <i data-lucide="database"></i>
+                            <div>
+                                <h4>Storage Solution Architect</h4>
+                                <p>Determine correct GCP storage backend</p>
+                            </div>
+                        </button>
+                        <button class="wizard-selector-btn" id="btn-select-pipeline-wizard">
+                            <i data-lucide="git-branch"></i>
+                            <div>
+                                <h4>Data Processing Pipeline</h4>
+                                <p>Select appropriate streaming/batch processing runner</p>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="wizard-card" id="wizard-card-container">
+                        <!-- Populated dynamically by app.js state machine -->
+                    </div>
+                </section>
+
+                <!-- SECTION: INTERACTIVE QUIZ -->
+                <section id="quiz" class="tab-content">
+                    <div class="section-header">
+                        <h2>GCP PDE Interactive Exam Sandbox</h2>
+                        <p>Evaluate your real-time data engineering logic. Built with case-study styled scenarios targeting actual exam vectors.</p>
+                    </div>
+
+                    <div class="quiz-container">
+                        <!-- Start Screen -->
+                        <div id="quiz-start-screen" class="quiz-state-view active">
+                            <div class="quiz-intro-hero">
+                                <i data-lucide="terminal"></i>
+                                <h3>Ready to test your architect logic?</h3>
+                                <p>You are about to launch a high-fidelity mock exam. It contains <strong>30 realistic case-study based multiple choice questions</strong> mapping directly to actual GCP PDE domains.</p>
+                                <div class="quiz-rules">
+                                    <div class="rule"><i data-lucide="check-circle"></i> Multiple options, one logically correct choice.</div>
+                                    <div class="rule"><i data-lucide="alert-circle"></i> Detailed architectural explanation provided upon response.</div>
+                                    <div class="rule"><i data-lucide="history"></i> Real-time tracking of answers.</div>
+                                </div>
+                                <button class="btn btn-primary" id="btn-start-quiz">Launch Practice Sandbox</button>
+                            </div>
+                        </div>
+
+                        <!-- Main Quiz Active Screen -->
+                        <div id="quiz-active-screen" class="quiz-state-view">
+                            <div class="quiz-header">
+                                <div class="quiz-progress-wrapper">
+                                    <div class="quiz-progress-text">
+                                        Question <span id="current-q-num">1</span> of <span id="total-q-num">30</span>
+                                    </div>
+                                    <div class="progress-bar-outer">
+                                        <div class="progress-bar-inner" id="quiz-progress-bar" style="width: 3.33%;"></div>
+                                    </div>
+                                </div>
+                                <div class="quiz-timer">
+                                    <i data-lucide="clock"></i>
+                                    <span id="quiz-time">00:00</span>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question-box">
+                                <div class="q-domain-tag" id="question-domain">Domain 1: Storage design</div>
+                                <h4 class="question-text" id="question-text">
+                                    Scenario: Loading actual question...
+                                </h4>
+                            </div>
+
+                            <div class="quiz-options" id="quiz-options-container">
+                                <!-- Options populated by JS -->
+                            </div>
+
+                            <div class="quiz-action-bar">
+                                <button class="btn btn-secondary" id="btn-submit-answer" disabled>Submit Answer</button>
+                                <button class="btn btn-primary" id="btn-next-question" style="display: none;">Next Question <i data-lucide="arrow-right"></i></button>
+                            </div>
+
+                            <!-- Detailed Feedback Explanation Container -->
+                            <div id="quiz-explanation-box" class="quiz-explanation-card" style="display: none;">
+                                <div class="explanation-header">
+                                    <i id="explanation-icon" data-lucide="help-circle"></i>
+                                    <h5 id="explanation-title">Explanation</h5>
+                                </div>
+                                <p id="explanation-text">Detailed explanation context here...</p>
+                            </div>
+                        </div>
+
+                        <!-- Score Summary Screen -->
+                        <div id="quiz-summary-screen" class="quiz-state-view">
+                            <div class="quiz-result-hero">
+                                <div class="result-radial">
+                                    <svg viewBox="0 0 100 100" class="radial-svg">
+                                        <circle cx="50" cy="50" r="45" class="radial-bg"></circle>
+                                        <circle cx="50" cy="50" r="45" class="radial-progress" id="result-radial-progress" stroke-dasharray="282.7" stroke-dashoffset="282.7"></circle>
+                                    </svg>
+                                    <div class="radial-text" id="result-score-percent">0%</div>
+                                </div>
+                                <h3 id="result-status-title">Exam Complete!</h3>
+                                <p id="result-status-desc">Analyzing your score metrics...</p>
+                                <div class="score-breakdown-details">
+                                    <p>Correct Answers: <strong id="result-correct-count">0</strong> / <strong id="result-total-count">30</strong></p>
+                                    <p>Passing Grade: <strong>70%</strong></p>
+                                </div>
+                                <div class="result-buttons">
+                                    <button class="btn btn-primary" id="btn-restart-quiz"><i data-lucide="rotate-ccw"></i> Try Again</button>
+                                    <button class="btn btn-secondary" id="btn-view-sketches-results"><i data-lucide="image"></i> Study Sketchnotes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION: STUDY PROGRESS -->
+                <section id="progress" class="tab-content">
+                    <div class="section-header">
+                        <h2>Study Tracking Board</h2>
+                        <p>Keep track of your learning milestone checkpoints for the GCP PDE Exam.</p>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="milestones-card">
+                            <h3><i data-lucide="check-square"></i> Key Milestones</h3>
+                            <div class="milestones-list">
+                                <label class="milestone-item">
+                                    <input type="checkbox" id="m1" class="milestone-checkbox">
+                                    <span class="milestone-checkmark"></span>
+                                    <div class="milestone-text">
+                                        <strong>Explored all 10 Priyanka Vergadia Visual Sketchnotes</strong>
+                                        <p>Studied real-time data flow, storage differences, and orchestration mechanics.</p>
+                                    </div>
+                                </label>
+                                <label class="milestone-item">
+                                    <input type="checkbox" id="m2" class="milestone-checkbox">
+                                    <span class="milestone-checkmark"></span>
+                                    <div class="milestone-text">
+                                        <strong>Understood Pub/Sub vs Pub/Sub Lite Trade-offs</strong>
+                                        <p>Understood when to use ordering keys, push vs pull webhooks, and replication characteristics.</p>
+                                    </div>
+                                </label>
+                                <label class="milestone-item">
+                                    <input type="checkbox" id="m3" class="milestone-checkbox">
+                                    <span class="milestone-checkmark"></span>
+                                    <div class="milestone-text">
+                                        <strong>Understood BigQuery Partitioning & Clustering</strong>
+                                        <p>Understood table slicing logic based on ingested dates, and column categorization limits.</p>
+                                    </div>
+                                </label>
+                                <label class="milestone-item">
+                                    <input type="checkbox" id="m4" class="milestone-checkbox">
+                                    <span class="milestone-checkmark"></span>
+                                    <div class="milestone-text">
+                                        <strong>Understood Dataflow Windowing Mechanics</strong>
+                                        <p>Completed study on Fixed, Sliding, and Session windows, triggers, and late data processing.</p>
+                                    </div>
+                                </label>
+                                <label class="milestone-item">
+                                    <input type="checkbox" id="m5" class="milestone-checkbox">
+                                    <span class="milestone-checkmark"></span>
+                                    <div class="milestone-text">
+                                        <strong>Scored 80% or Higher on the Practice Exam Sandbox</strong>
+                                        <p>Evaluated and resolved 30 real-time GCP case study problems accurately.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION: OFFICIAL PREP & CASE STUDIES -->
+                <section id="official-prep" class="tab-content">
+                    <div class="section-header">
+                        <h2>Official Preparation & Case Studies</h2>
+                        <p>Google Cloud-recommended learning paths, critical hands-on labs, and production-level case study architectures.</p>
+                    </div>
+
+                    <div class="prep-grid">
+                        <!-- Left Column: Training Paths & Labs -->
+                        <div class="prep-column-left">
+                            <div class="prep-card">
+                                <h3><i data-lucide="book-open"></i> Official Learning Path</h3>
+                                <p class="prep-card-subtitle">Recommended Google Cloud course curriculum</p>
+                                <div class="pathway-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">1</div>
+                                        <div class="timeline-content">
+                                            <h4>GCP Big Data & ML Fundamentals</h4>
+                                            <p>Introduction to the data-to-AI lifecycle and core services.</p>
+                                            <span class="timeline-duration">6 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">2</div>
+                                        <div class="timeline-content">
+                                            <h4>Modernizing Data Lakes & Warehouses</h4>
+                                            <p>Data warehousing foundations, table partitioning/clustering, and governance.</p>
+                                            <span class="timeline-duration">8 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">3</div>
+                                        <div class="timeline-content">
+                                            <h4>Building Batch Data Pipelines</h4>
+                                            <p>Batch processing using Cloud Dataflow and ephemeral Dataproc clusters.</p>
+                                            <span class="timeline-duration">10 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">4</div>
+                                        <div class="timeline-content">
+                                            <h4>Building Resilient Streaming Analytics</h4>
+                                            <p>Pub/Sub, stream processing, windowing triggers, and Bigtable writing.</p>
+                                            <span class="timeline-duration">12 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">5</div>
+                                        <div class="timeline-content">
+                                            <h4>Smart Analytics, ML, & AI</h4>
+                                            <p>BQML, machine learning pipelines, and Vertex AI AutoML/Pipeline APIs.</p>
+                                            <span class="timeline-duration">8 hours</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-badge">6</div>
+                                        <div class="timeline-content">
+                                            <h4>PDE Exam Preparation</h4>
+                                            <p>Final practice questions, case-study review, and exam prep insights.</p>
+                                            <span class="timeline-duration">4 hours</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prep-card">
+                                <h3><i data-lucide="check-square"></i> Hands-on Practice Labs</h3>
+                                <p class="prep-card-subtitle">Complete these critical Qwiklabs to establish strong console confidence. Progress is saved locally!</p>
+                                <div class="labs-checklist">
+                                    <label class="lab-item-label">
+                                        <input type="checkbox" id="lab-bq-part" class="lab-checkbox">
+                                        <span class="lab-custom-box"></span>
+                                        <div class="lab-details">
+                                            <strong>Partitioned and Clustered Tables in BigQuery</strong>
+                                            <p>Optimizing query scan volumes and slot consumption.</p>
+                                        </div>
+                                    </label>
+                                    <label class="lab-item-label">
+                                        <input type="checkbox" id="lab-df-stream" class="lab-checkbox">
+                                        <span class="lab-custom-box"></span>
+                                        <div class="lab-details">
+                                            <strong>Streaming Analytics Pipelines with Cloud Dataflow</strong>
+                                            <p>Creating and monitoring streaming Beam pipelines with windowing.</p>
+                                        </div>
+                                    </label>
+                                    <label class="lab-item-label">
+                                        <input type="checkbox" id="lab-ds-cdc" class="lab-checkbox">
+                                        <span class="lab-custom-box"></span>
+                                        <div class="lab-details">
+                                            <strong>Event-Driven CDC with Datastream & BigQuery</strong>
+                                            <p>Zero-etl replication of operational DB transactions directly into BigQuery.</p>
+                                        </div>
+                                    </label>
+                                    <label class="lab-item-label">
+                                        <input type="checkbox" id="lab-dx-gov" class="lab-checkbox">
+                                        <span class="lab-custom-box"></span>
+                                        <div class="lab-details">
+                                            <strong>Creating and Governing Data Lakes with Dataplex</strong>
+                                            <p>Centralized metadata discovery, asset organization, and policy management.</p>
+                                        </div>
+                                    </label>
+                                    <label class="lab-item-label">
+                                        <input type="checkbox" id="lab-composer" class="lab-checkbox">
+                                        <span class="lab-custom-box"></span>
+                                        <div class="lab-details">
+                                            <strong>Orchestrating Pipelines with Cloud Composer</strong>
+                                            <p>Authoring and scheduling complex Airflow DAG orchestrations.</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Case Studies -->
+                        <div class="prep-column-right">
+                            <div class="prep-card bg-glass-glow">
+                                <div class="case-header">
+                                    <span class="case-badge animate-pulse">CASE STUDY A</span>
+                                    <h3>"Flowing Retail" — Omnichannel Sales</h3>
+                                </div>
+                                <p class="case-description">Transitioning a global retail transactional mainframe and POS network into an event-driven ledger with real-time inventory alerts and historical predictive warehousing.</p>
+                                
+                                <div class="case-details-section">
+                                    <h4>💡 Architectural Pipeline</h4>
+                                    <div class="case-flow">
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-ingest">INGEST</span>
+                                            <h5>Datastream & Pub/Sub</h5>
+                                            <p>Datastream captures legacy database transactions (CDC); Pub/Sub ingests POS web sales streams.</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-process">PROCESS</span>
+                                            <h5>Cloud Dataflow</h5>
+                                            <p>Deduplicates order events, anonymizes/strips PII, and enriches fields on-the-fly.</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-store">STORE</span>
+                                            <h5>Spanner & BigQuery</h5>
+                                            <p>Spanner holds global ledger with relational consistency. BigQuery serves as data warehouse.</p>
+                                        </div>
+                                    </div>
+
+                                    <h4>🛡️ Service Selection Criteria</h4>
+                                    <ul class="criteria-list">
+                                        <li><strong>Cloud Spanner</strong>: Selected for order ledger to ensure absolute global ACID transactional consistency and relational structure during massive peak retail spikes.</li>
+                                        <li><strong>Cloud Datastream</strong>: Selected for seamless, serverless PostgreSQL-to-BigQuery Change Data Capture (CDC) replication without batch files or cron-job loaders.</li>
+                                        <li><strong>BigQuery ML (BQML)</strong>: Trains ARIMA_PLUS demand forecasting models directly inside the database using SQL, speeding up time-to-insight.</li>
+                                    </ul>
+
+                                    <div class="exam-caution">
+                                        <strong>⚠️ Exam Focus</strong>: Spanner is chosen when global transaction consistency is required. If ACID is not needed but extreme analytical scale or simple key-value reads are required, choose BigQuery or Cloud SQL/Bigtable instead.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="prep-card bg-glass-glow">
+                                <div class="case-header">
+                                    <span class="case-badge animate-pulse">CASE STUDY B</span>
+                                    <h3>"Earthquake Sensor Network" — IoT Streams</h3>
+                                </div>
+                                <p class="case-description">Ingesting, processing, and storing continuous, massive, high-frequency vibrational telemetry from 50,000 IoT seismic sensors for real-time alert trigger webhooks and historical scientific modeling.</p>
+                                
+                                <div class="case-details-section">
+                                    <h4>💡 Architectural Pipeline</h4>
+                                    <div class="case-flow">
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-ingest">INGEST</span>
+                                            <h5>Cloud Pub/Sub</h5>
+                                            <p>Streams multi-million writes/sec seismological telemetry without custom scaling nodes.</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-process">PROCESS</span>
+                                            <h5>Cloud Dataflow</h5>
+                                            <p>Computes average tremors using 10s sliding windows and event-time watermark tracking.</p>
+                                        </div>
+                                        <div class="flow-step">
+                                            <span class="step-tag tag-store">STORE</span>
+                                            <h5>Bigtable & BigQuery</h5>
+                                            <p>Bigtable stores raw, high-throughput time-series metrics. BigQuery runs deep analytics.</p>
+                                        </div>
+                                    </div>
+
+                                    <h4>🛡️ Service Selection Criteria</h4>
+                                    <ul class="criteria-list">
+                                        <li><strong>Cloud Bigtable</strong>: Chosen for high-frequency raw metric storage due to its sub-millisecond, massive linear write throughput scaling. Row key designed as <code>station_id#timestamp_reversed</code> to prevent tablet hotspotting.</li>
+                                        <li><strong>Cloud Dataflow Windowing</strong>: Utilizes Sliding Windows (10s duration, sliding every 1s) to evaluate sudden seismic thresholds. Configured with <code>withAllowedLateness</code> to handle delayed data from remote, poorly connected base stations.</li>
+                                        <li><strong>Cloud Run Trigger</strong>: Real-time warnings are triggered directly from Dataflow streams pushing alert messages to an auxiliary warning webhook topic.</li>
+                                    </ul>
+
+                                    <div class="exam-caution">
+                                        <strong>⚠️ Exam Focus</strong>: Bigtable is optimal for timeseries writes, but row key design is critical. Never use timestamps as prefixes for keys if writes are sequential. Always place high-entropy keys (like station ID) or hashes first.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-nav">
+        <button class="nav-item active" data-target="dashboard">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+        </button>
+        <button class="nav-item" data-target="sketchnotes">
+            <i data-lucide="image"></i>
+            <span>Sketches</span>
+        </button>
+        <button class="nav-item" data-target="decision-trees">
+            <i data-lucide="git-branch"></i>
+            <span>Trees</span>
+        </button>
+        <button class="nav-item" data-target="official-prep">
+            <i data-lucide="graduation-cap"></i>
+            <span>Prep</span>
+        </button>
+        <button class="nav-item" data-target="quiz">
+            <i data-lucide="award"></i>
+            <span>Exam</span>
+        </button>
+        <button class="nav-item" data-target="progress">
+            <i data-lucide="check-square"></i>
+            <span>Progress</span>
+        </button>
+    </nav>
+
+    <!-- Sketchnote Details Modal Overlay -->
+    <div id="sketchnote-modal" class="modal-overlay">
+        <div class="modal-card glass-modal">
+            <button class="modal-close-btn" id="modal-close"><i data-lucide="x"></i></button>
+            <div class="modal-grid">
+                <div class="modal-image-panel">
+                    <img id="modal-sketch-image" src="" alt="GCP Sketchnote View">
+                </div>
+                <div class="modal-info-panel">
+                    <span id="modal-product-tag" class="tag">INGEST</span>
+                    <h2 id="modal-product-name">Cloud Product Name</h2>
+                    <p id="modal-product-tagline" class="product-tagline">Visual architectural overview of the service.</p>
+                    
+                    <div class="modal-section">
+                        <h3><i data-lucide="info"></i> Core Concepts</h3>
+                        <p id="modal-core-concepts">Details here...</p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3><i data-lucide="help-circle"></i> Key Exam Gotchas</h3>
+                        <ul id="modal-exam-gotchas" class="gotchas-list">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-action-bar">
+                        <button class="btn btn-primary" id="btn-mark-explored">Mark as Explored</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
