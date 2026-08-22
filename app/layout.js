@@ -19,6 +19,11 @@ const outfit = Outfit({
 export const metadata = {
   title: "Louis Philip | Personal Portfolio",
   description: "Personal website of Louis Philip - Software Engineer & Content Creator",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
