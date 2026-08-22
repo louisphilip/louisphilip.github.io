@@ -17,7 +17,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <span className={styles.greeting}>Hello, I'm</span>
+                        <span className={styles.greeting}>Hello, I&apos;m</span>
                         <h1 className={styles.name}>{profileInfo.name}</h1>
                         <h2 className={styles.title}>{profileInfo.title}</h2>
                         <p className={styles.description}>{bioData.descOne}</p>

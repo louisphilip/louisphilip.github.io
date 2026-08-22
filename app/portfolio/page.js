@@ -15,7 +15,7 @@ export default async function Portfolio() {
             <div style={{ marginBottom: '60px' }}>
                 <h1 style={{ fontSize: '48px', marginBottom: '20px' }}>Starred Repos</h1>
                 <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--text-secondary)', maxWidth: '800px' }}>
-                    A collection of interesting repositories I've discovered and starred on GitHub.
+                    A collection of interesting repositories I&apos;ve discovered and starred on GitHub.
                 </p>
             </div>
 
