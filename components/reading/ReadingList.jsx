@@ -65,11 +65,6 @@ export default function ReadingList({ books }) {
         setPage(prev => prev + 1);
     };
 
-    // Reset page when filters change
-    useMemo(() => {
-        setPage(1);
-    }, [searchQuery, sortBy, filterCategory]);
-
     return (
         <div>
             <div className={styles.controls}>
@@ -78,7 +73,10 @@ export default function ReadingList({ books }) {
                         type="text"
                         placeholder="Search books or authors..."
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onChange={(e) => {
+                            setSearchQuery(e.target.value);
+                            setPage(1);
+                        }}
                         className={styles.searchInput}
                     />
                 </div>
@@ -86,7 +84,10 @@ export default function ReadingList({ books }) {
                 <div className={styles.filterGroup}>
                     <select 
                         value={filterCategory} 
-                        onChange={(e) => setFilterCategory(e.target.value)}
+                        onChange={(e) => {
+                            setFilterCategory(e.target.value);
+                            setPage(1);
+                        }}
                         className={styles.select}
                     >
                         {categories.map(cat => (
@@ -96,7 +97,10 @@ export default function ReadingList({ books }) {
 
                     <select 
                         value={sortBy} 
-                        onChange={(e) => setSortBy(e.target.value)}
+                        onChange={(e) => {
+                            setSortBy(e.target.value);
+                            setPage(1);
+                        }}
                         className={styles.select}
                     >
                         <option value="rating">Highest Rated</option>
