@@ -1,0 +1,219 @@
+@use '../../styles/mixins' as *;
+
+.sky {
+    position: relative;
+    height: 560px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    background:
+        radial-gradient(ellipse at 20% 15%, rgba(14, 165, 233, 0.12), transparent 55%),
+        radial-gradient(ellipse at 80% 85%, rgba(45, 212, 191, 0.1), transparent 55%),
+        radial-gradient(ellipse at 50% 50%, #111827 0%, #0b0d12 70%);
+    overflow: hidden;
+
+    @include mobile {
+        height: 480px;
+        border-radius: var(--radius-md);
+    }
+}
+
+.lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    line {
+        stroke: rgba(255, 255, 255, 0.14);
+        stroke-width: 1;
+        transition: opacity var(--transition-normal);
+    }
+
+    .lineDimmed {
+        opacity: 0.2;
+    }
+}
+
+.stars,
+.labels {
+    position: absolute;
+    inset: 0;
+}
+
+.labels {
+    // Labels float above the stars so they stay clickable when a star drifts underneath.
+    z-index: 2;
+    pointer-events: none;
+}
+
+.label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    max-width: 30%;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: calc(0.8rem + var(--weight) * 0.85rem);
+    line-height: 1.15;
+    text-align: center;
+    text-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+
+    @include mobile {
+        font-size: calc(0.68rem + var(--weight) * 0.35rem);
+        padding: 2px 6px;
+    }
+}
+
+.labelActive {
+    color: #ffffff;
+    border-color: var(--color);
+    background: rgba(11, 13, 18, 0.7);
+}
+
+.labelCount {
+    margin-left: 6px;
+    font-family: var(--font-main);
+    font-size: 0.7em;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.star {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity var(--transition-normal);
+
+    // The visible star is smaller than the button so it stays easy to hit.
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        background: var(--color);
+        box-shadow: 0 0 6px 1px var(--color);
+        transform: translate(-50%, -50%);
+        animation: twinkle 4s ease-in-out infinite;
+        animation-delay: var(--delay);
+        transition: width var(--transition-fast), height var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+        width: calc(var(--size) + 5px);
+        height: calc(var(--size) + 5px);
+        box-shadow: 0 0 14px 4px var(--color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 1px;
+    }
+}
+
+.starDimmed {
+    opacity: 0.18;
+}
+
+.starSelected {
+    z-index: 1;
+
+    &::after {
+        width: calc(var(--size) + 6px);
+        height: calc(var(--size) + 6px);
+        background: #ffffff;
+        box-shadow: 0 0 0 3px var(--color), 0 0 22px 6px var(--color);
+        animation: none;
+    }
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .star::after {
+        animation: none;
+    }
+}
+
+.preview {
+    position: absolute;
+    z-index: 3;
+    width: min(300px, 70vw);
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    pointer-events: none;
+    @include glass;
+    background: rgba(13, 17, 23, 0.92);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.previewRight {
+    margin-left: 14px;
+}
+
+.previewLeft {
+    transform: translateX(calc(-100% - 14px));
+}
+
+.previewAbove {
+    translate: 0 calc(-100% - 10px);
+}
+
+.previewBelow {
+    translate: 0 14px;
+}
+
+.previewText {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.previewCredit {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
