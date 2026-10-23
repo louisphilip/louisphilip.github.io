@@ -155,3 +155,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Raw personal quote notes (curated copy lives in data/quotes.js)
+quotes.txt
