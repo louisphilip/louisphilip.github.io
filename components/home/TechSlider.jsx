@@ -4,18 +4,19 @@ import { motion } from "framer-motion";
 import {
     SiGooglecloud,
     SiTerraform,
-    SiAmazon,
     SiGithubactions,
     SiFlutter,
     SiPrisma,
     SiGoogle
 } from "react-icons/si";
+// Simple Icons dropped the Amazon logo in react-icons 5.7, so AWS comes from Font Awesome.
+import { FaAws } from "react-icons/fa";
 import styles from "./TechSlider.module.scss";
 
 const technologies = [
     { name: "Google Cloud", icon: SiGooglecloud, color: "#4285F4" },
     { name: "Terraform", icon: SiTerraform, color: "#7B42BC" },
-    { name: "AWS", icon: SiAmazon, color: "#FF9900" },
+    { name: "AWS", icon: FaAws, color: "#FF9900" },
     { name: "CI/CD", icon: SiGithubactions, color: "#2088FF" },
     { name: "Flutter", icon: SiFlutter, color: "#02569B" },
     { name: "Prisma Cloud", icon: SiPrisma, color: "#2D3748" },
