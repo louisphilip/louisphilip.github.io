@@ -1,0 +1,426 @@
+@use '../../styles/mixins' as *;
+
+// ── Page intro ──────────────────────────────────────────────────────────────
+
+.intro {
+    margin-bottom: 48px;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+
+    @include mobile {
+        font-size: 36px;
+    }
+}
+
+.gradientText {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 800px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+}
+
+.skyHint {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+// ── Shared bits ─────────────────────────────────────────────────────────────
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.sectionTitle {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.sectionLead {
+    color: var(--text-secondary);
+}
+
+%focusRing {
+    &:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+}
+
+.iconButton {
+    @extend %focusRing;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 15px;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+
+    &:hover {
+        color: var(--primary-color);
+        background: rgba(14, 165, 233, 0.08);
+    }
+}
+
+.success {
+    color: #2dd4bf;
+}
+
+.primaryButton {
+    @extend %focusRing;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    background: var(--gradient-primary);
+    color: #0b0d12;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+
+    &:hover {
+        box-shadow: var(--shadow-glow);
+        transform: translateY(-1px);
+    }
+}
+
+.textButton {
+    @extend %focusRing;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// ── Credit ──────────────────────────────────────────────────────────────────
+
+.credit {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.creditDash {
+    color: var(--primary-color);
+}
+
+.creditName {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.creditWork {
+    font-style: italic;
+}
+
+.creditVia {
+    color: var(--text-muted);
+
+    &::before {
+        content: '·';
+        margin-right: 8px;
+    }
+}
+
+.creditName + .creditWork::before {
+    content: '·';
+    margin-right: 8px;
+    font-style: normal;
+}
+
+// ── Spotlight ───────────────────────────────────────────────────────────────
+
+.spotlight {
+    position: relative;
+    margin-top: 48px;
+    padding: 48px 56px;
+    border-radius: var(--radius-lg);
+    @include glass;
+    scroll-margin-top: calc(var(--header-height) + 20px);
+
+    &::before {
+        content: '“';
+        position: absolute;
+        top: -10px;
+        right: 36px;
+        font-family: var(--font-heading);
+        font-size: 160px;
+        line-height: 1;
+        color: var(--primary-color);
+        opacity: 0.18;
+        pointer-events: none;
+    }
+
+    @include mobile {
+        padding: 32px 24px;
+    }
+}
+
+.spotlightStage {
+    min-height: 180px;
+    margin: 20px 0 28px;
+    display: flex;
+    align-items: center;
+}
+
+.spotlightFigure {
+    width: 100%;
+}
+
+.spotlightText {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.spotlightLarge {
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.spotlightMedium {
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+.spotlightSmall {
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.6;
+}
+
+.spotlightCredit {
+    font-size: 16px;
+}
+
+.spotlightActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+// ── Wall ────────────────────────────────────────────────────────────────────
+
+.wall {
+    margin-top: 80px;
+}
+
+.wallHeader {
+    margin-bottom: 28px;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.filterRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    @extend %focusRing;
+    padding: 7px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+
+    &:hover {
+        color: var(--text-primary);
+        border-color: var(--text-muted);
+    }
+}
+
+.chipActive {
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    background: rgba(14, 165, 233, 0.14);
+
+    &:hover {
+        border-color: var(--primary-color);
+    }
+}
+
+.chipCount {
+    margin-left: 4px;
+    color: var(--text-muted);
+    font-size: 12px;
+
+    .chipActive & {
+        color: var(--primary-color);
+    }
+}
+
+.shelf {
+    margin-top: 10px;
+}
+
+.shelfTitle {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.resultsBar {
+    @include flex-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 15px;
+
+    strong {
+        color: var(--text-primary);
+    }
+}
+
+.grid {
+    columns: 3 300px;
+    column-gap: 20px;
+}
+
+.card {
+    break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    animation: cardIn 0.4s ease both;
+    transition: border-color var(--transition-normal), transform var(--transition-normal);
+
+    &:hover {
+        border-color: rgba(14, 165, 233, 0.5);
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+.cardText {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-primary);
+}
+
+.readMore {
+    @extend .textButton;
+    align-self: flex-start;
+    font-size: 14px;
+}
+
+.cardFooter {
+    @include flex-between;
+    align-items: flex-end;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+}
+
+.tag {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.cardActions {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.noResults {
+    padding: 60px 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 18px;
+}
